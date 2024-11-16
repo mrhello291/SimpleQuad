@@ -1,0 +1,7 @@
+set(quad_input_interfacing_SETUP_PY_SETUP_MODULE "distutils.core")
+set(quad_input_interfacing_SETUP_PY_VERSION "0.0.0")
+set(quad_input_interfacing_SETUP_PY_SCRIPTS "")
+set(quad_input_interfacing_SETUP_PY_PACKAGES "quad_input_interfacing")
+set(quad_input_interfacing_SETUP_PY_PACKAGE_DIRS "src/quad_input_interfacing")
+set(quad_input_interfacing_SETUP_PY_MODULES "")
+set(quad_input_interfacing_SETUP_PY_MODULE_DIRS "")

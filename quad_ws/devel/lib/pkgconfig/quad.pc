@@ -1,0 +1,8 @@
+prefix=/home/mrhello/SimpleQuad/quad_ws/devel
+
+Name: quad
+Description: Description of quad
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

@@ -1,0 +1,8 @@
+prefix=/home/mrhello/SimpleQuad/quad_ws/install
+
+Name: quad_cam_interfacing
+Description: Description of quad_cam_interfacing
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
