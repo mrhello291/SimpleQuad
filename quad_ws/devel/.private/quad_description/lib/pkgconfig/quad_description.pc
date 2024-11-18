@@ -1,0 +1,8 @@
+prefix=/home/akash/SimpleQuad/quad_ws/devel/.private/quad_description
+
+Name: quad_description
+Description: Description of quad_description
+Version: 1.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

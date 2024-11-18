@@ -1,9 +1,1 @@
-
-(cl:in-package :asdf)
-
-(defsystem "quad_peripheral_interfacing-msg"
-  :depends-on (:roslisp-msg-protocol :roslisp-utils )
-  :components ((:file "_package")
-    (:file "ElectricalMeasurements" :depends-on ("_package_ElectricalMeasurements"))
-    (:file "_package_ElectricalMeasurements" :depends-on ("_package"))
-  ))
+/home/akash/SimpleQuad/quad_ws/devel/.private/quad_peripheral_interfacing/share/common-lisp/ros/quad_peripheral_interfacing/msg/quad_peripheral_interfacing-msg.asd

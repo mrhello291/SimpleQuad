@@ -1,8 +1,1 @@
-prefix=/home/mrhello/SimpleQuad/quad_ws/devel
-
-Name: quad_utilities
-Description: Description of quad_utilities
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 
+/home/akash/SimpleQuad/quad_ws/devel/.private/quad_utilities/lib/pkgconfig/quad_utilities.pc

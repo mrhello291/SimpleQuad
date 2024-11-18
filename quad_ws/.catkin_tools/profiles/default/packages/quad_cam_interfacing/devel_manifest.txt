@@ -1,0 +1,5 @@
+quad_hardware_interfacing/quad_cam_interfacing
+/home/akash/SimpleQuad/quad_ws/devel/.private/quad_cam_interfacing/cmake.lock /home/akash/SimpleQuad/quad_ws/devel/./cmake.lock
+/home/akash/SimpleQuad/quad_ws/devel/.private/quad_cam_interfacing/lib/pkgconfig/quad_cam_interfacing.pc /home/akash/SimpleQuad/quad_ws/devel/lib/pkgconfig/quad_cam_interfacing.pc
+/home/akash/SimpleQuad/quad_ws/devel/.private/quad_cam_interfacing/share/quad_cam_interfacing/cmake/quad_cam_interfacingConfig-version.cmake /home/akash/SimpleQuad/quad_ws/devel/share/quad_cam_interfacing/cmake/quad_cam_interfacingConfig-version.cmake
+/home/akash/SimpleQuad/quad_ws/devel/.private/quad_cam_interfacing/share/quad_cam_interfacing/cmake/quad_cam_interfacingConfig.cmake /home/akash/SimpleQuad/quad_ws/devel/share/quad_cam_interfacing/cmake/quad_cam_interfacingConfig.cmake

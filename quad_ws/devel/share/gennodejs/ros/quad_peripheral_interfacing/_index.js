@@ -1,6 +1,1 @@
-
-"use strict";
-
-module.exports = {
-  msg: require('./msg/_index.js'),
-};
+/home/akash/SimpleQuad/quad_ws/devel/.private/quad_peripheral_interfacing/share/gennodejs/ros/quad_peripheral_interfacing/_index.js

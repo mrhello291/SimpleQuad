@@ -1,8 +1,1 @@
-
-"use strict";
-
-let ElectricalMeasurements = require('./ElectricalMeasurements.js');
-
-module.exports = {
-  ElectricalMeasurements: ElectricalMeasurements,
-};
+/home/akash/SimpleQuad/quad_ws/devel/.private/quad_peripheral_interfacing/share/gennodejs/ros/quad_peripheral_interfacing/msg/_index.js

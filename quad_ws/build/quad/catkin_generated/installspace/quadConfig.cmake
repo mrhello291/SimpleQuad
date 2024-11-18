@@ -67,14 +67,14 @@ set(quad_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(quad_SOURCE_PREFIX /home/mrhello/SimpleQuad/quad_ws/src/quad)
-  set(quad_DEVEL_PREFIX /home/mrhello/SimpleQuad/quad_ws/devel)
+  set(quad_SOURCE_PREFIX /home/akash/SimpleQuad/quad_ws/src/quad)
+  set(quad_DEVEL_PREFIX /home/akash/SimpleQuad/quad_ws/devel/.private/quad)
   set(quad_INSTALL_PREFIX "")
   set(quad_PREFIX ${quad_DEVEL_PREFIX})
 else()
   set(quad_SOURCE_PREFIX "")
   set(quad_DEVEL_PREFIX "")
-  set(quad_INSTALL_PREFIX /home/mrhello/SimpleQuad/quad_ws/install)
+  set(quad_INSTALL_PREFIX /home/akash/SimpleQuad/quad_ws/install)
   set(quad_PREFIX ${quad_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/mrhello/SimpleQuad/quad_ws/install/lib;/opt/ros/noetic/lib)
+    foreach(path /home/akash/SimpleQuad/quad_ws/install/lib;/home/akash/SimpleQuad/quad_ws/devel/lib;/home/akash/DingoQuadruped/dingo_ws/devel/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

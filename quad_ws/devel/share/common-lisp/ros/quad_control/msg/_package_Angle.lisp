@@ -1,8 +1,1 @@
-(cl:in-package quad_control-msg)
-(cl:export '(THETA1-VAL
-          THETA1
-          THETA2-VAL
-          THETA2
-          THETA3-VAL
-          THETA3
-))
+/home/akash/SimpleQuad/quad_ws/devel/.private/quad_control/share/common-lisp/ros/quad_control/msg/_package_Angle.lisp

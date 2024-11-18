@@ -1,8 +1,8 @@
-# Install script for directory: /home/mrhello/SimpleQuad/quad_ws/src/quad_control
+# Install script for directory: /home/akash/SimpleQuad/quad_ws/src/quad_control
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/mrhello/SimpleQuad/quad_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/akash/SimpleQuad/quad_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,65 +38,172 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  include("/home/mrhello/SimpleQuad/quad_ws/build/quad_control/catkin_generated/safe_execute_install.cmake")
+  
+      if (NOT EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}")
+        file(MAKE_DIRECTORY "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}")
+      endif()
+      if (NOT EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/.catkin")
+        file(WRITE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/.catkin" "")
+      endif()
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
+   "/home/akash/SimpleQuad/quad_ws/install/_setup_util.py")
+  if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
+    message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
+  endif()
+  if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
+    message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
+  endif()
+file(INSTALL DESTINATION "/home/akash/SimpleQuad/quad_ws/install" TYPE PROGRAM FILES "/home/akash/SimpleQuad/quad_ws/build/quad_control/catkin_generated/installspace/_setup_util.py")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
+   "/home/akash/SimpleQuad/quad_ws/install/env.sh")
+  if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
+    message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
+  endif()
+  if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
+    message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
+  endif()
+file(INSTALL DESTINATION "/home/akash/SimpleQuad/quad_ws/install" TYPE PROGRAM FILES "/home/akash/SimpleQuad/quad_ws/build/quad_control/catkin_generated/installspace/env.sh")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
+   "/home/akash/SimpleQuad/quad_ws/install/setup.bash;/home/akash/SimpleQuad/quad_ws/install/local_setup.bash")
+  if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
+    message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
+  endif()
+  if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
+    message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
+  endif()
+file(INSTALL DESTINATION "/home/akash/SimpleQuad/quad_ws/install" TYPE FILE FILES
+    "/home/akash/SimpleQuad/quad_ws/build/quad_control/catkin_generated/installspace/setup.bash"
+    "/home/akash/SimpleQuad/quad_ws/build/quad_control/catkin_generated/installspace/local_setup.bash"
+    )
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
+   "/home/akash/SimpleQuad/quad_ws/install/setup.sh;/home/akash/SimpleQuad/quad_ws/install/local_setup.sh")
+  if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
+    message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
+  endif()
+  if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
+    message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
+  endif()
+file(INSTALL DESTINATION "/home/akash/SimpleQuad/quad_ws/install" TYPE FILE FILES
+    "/home/akash/SimpleQuad/quad_ws/build/quad_control/catkin_generated/installspace/setup.sh"
+    "/home/akash/SimpleQuad/quad_ws/build/quad_control/catkin_generated/installspace/local_setup.sh"
+    )
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
+   "/home/akash/SimpleQuad/quad_ws/install/setup.zsh;/home/akash/SimpleQuad/quad_ws/install/local_setup.zsh")
+  if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
+    message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
+  endif()
+  if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
+    message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
+  endif()
+file(INSTALL DESTINATION "/home/akash/SimpleQuad/quad_ws/install" TYPE FILE FILES
+    "/home/akash/SimpleQuad/quad_ws/build/quad_control/catkin_generated/installspace/setup.zsh"
+    "/home/akash/SimpleQuad/quad_ws/build/quad_control/catkin_generated/installspace/local_setup.zsh"
+    )
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
+   "/home/akash/SimpleQuad/quad_ws/install/.rosinstall")
+  if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
+    message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
+  endif()
+  if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
+    message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
+  endif()
+file(INSTALL DESTINATION "/home/akash/SimpleQuad/quad_ws/install" TYPE FILE FILES "/home/akash/SimpleQuad/quad_ws/build/quad_control/catkin_generated/installspace/.rosinstall")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  include("/home/akash/SimpleQuad/quad_ws/build/quad_control/catkin_generated/safe_execute_install.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/quad_control/msg" TYPE FILE FILES
-    "/home/mrhello/SimpleQuad/quad_ws/src/quad_control/msg/TaskSpace.msg"
-    "/home/mrhello/SimpleQuad/quad_ws/src/quad_control/msg/JointSpace.msg"
-    "/home/mrhello/SimpleQuad/quad_ws/src/quad_control/msg/Angle.msg"
+    "/home/akash/SimpleQuad/quad_ws/src/quad_control/msg/TaskSpace.msg"
+    "/home/akash/SimpleQuad/quad_ws/src/quad_control/msg/JointSpace.msg"
+    "/home/akash/SimpleQuad/quad_ws/src/quad_control/msg/Angle.msg"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/quad_control/cmake" TYPE FILE FILES "/home/mrhello/SimpleQuad/quad_ws/build/quad_control/catkin_generated/installspace/quad_control-msg-paths.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/quad_control/cmake" TYPE FILE FILES "/home/akash/SimpleQuad/quad_ws/build/quad_control/catkin_generated/installspace/quad_control-msg-paths.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/mrhello/SimpleQuad/quad_ws/devel/include/quad_control")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/akash/SimpleQuad/quad_ws/devel/.private/quad_control/include/quad_control")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/mrhello/SimpleQuad/quad_ws/devel/share/roseus/ros/quad_control")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/akash/SimpleQuad/quad_ws/devel/.private/quad_control/share/roseus/ros/quad_control")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/mrhello/SimpleQuad/quad_ws/devel/share/common-lisp/ros/quad_control")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/akash/SimpleQuad/quad_ws/devel/.private/quad_control/share/common-lisp/ros/quad_control")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/mrhello/SimpleQuad/quad_ws/devel/share/gennodejs/ros/quad_control")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/akash/SimpleQuad/quad_ws/devel/.private/quad_control/share/gennodejs/ros/quad_control")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  execute_process(COMMAND "/usr/bin/python3" -m compileall "/home/mrhello/SimpleQuad/quad_ws/devel/lib/python3/dist-packages/quad_control")
+  execute_process(COMMAND "/usr/bin/python3" -m compileall "/home/akash/SimpleQuad/quad_ws/devel/.private/quad_control/lib/python3/dist-packages/quad_control")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages" TYPE DIRECTORY FILES "/home/mrhello/SimpleQuad/quad_ws/devel/lib/python3/dist-packages/quad_control" REGEX "/\\_\\_init\\_\\_\\.py$" EXCLUDE REGEX "/\\_\\_init\\_\\_\\.pyc$" EXCLUDE)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages" TYPE DIRECTORY FILES "/home/akash/SimpleQuad/quad_ws/devel/.private/quad_control/lib/python3/dist-packages/quad_control" REGEX "/\\_\\_init\\_\\_\\.py$" EXCLUDE REGEX "/\\_\\_init\\_\\_\\.pyc$" EXCLUDE)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages" TYPE DIRECTORY FILES "/home/mrhello/SimpleQuad/quad_ws/devel/lib/python3/dist-packages/quad_control" FILES_MATCHING REGEX "/home/mrhello/SimpleQuad/quad_ws/devel/lib/python3/dist-packages/quad_control/.+/__init__.pyc?$")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages" TYPE DIRECTORY FILES "/home/akash/SimpleQuad/quad_ws/devel/.private/quad_control/lib/python3/dist-packages/quad_control" FILES_MATCHING REGEX "/home/akash/SimpleQuad/quad_ws/devel/\\.private/quad_control/lib/python3/dist-packages/quad_control/.+/__init__.pyc?$")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/mrhello/SimpleQuad/quad_ws/build/quad_control/catkin_generated/installspace/quad_control.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/akash/SimpleQuad/quad_ws/build/quad_control/catkin_generated/installspace/quad_control.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/quad_control/cmake" TYPE FILE FILES "/home/mrhello/SimpleQuad/quad_ws/build/quad_control/catkin_generated/installspace/quad_control-msg-extras.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/quad_control/cmake" TYPE FILE FILES "/home/akash/SimpleQuad/quad_ws/build/quad_control/catkin_generated/installspace/quad_control-msg-extras.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/quad_control/cmake" TYPE FILE FILES
-    "/home/mrhello/SimpleQuad/quad_ws/build/quad_control/catkin_generated/installspace/quad_controlConfig.cmake"
-    "/home/mrhello/SimpleQuad/quad_ws/build/quad_control/catkin_generated/installspace/quad_controlConfig-version.cmake"
+    "/home/akash/SimpleQuad/quad_ws/build/quad_control/catkin_generated/installspace/quad_controlConfig.cmake"
+    "/home/akash/SimpleQuad/quad_ws/build/quad_control/catkin_generated/installspace/quad_controlConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/quad_control" TYPE FILE FILES "/home/mrhello/SimpleQuad/quad_ws/src/quad_control/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/quad_control" TYPE FILE FILES "/home/akash/SimpleQuad/quad_ws/src/quad_control/package.xml")
 endif()
 
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for each subdirectory.
+  include("/home/akash/SimpleQuad/quad_ws/build/quad_control/gtest/cmake_install.cmake")
+
+endif()
+
+if(CMAKE_INSTALL_COMPONENT)
+  set(CMAKE_INSTALL_MANIFEST "install_manifest_${CMAKE_INSTALL_COMPONENT}.txt")
+else()
+  set(CMAKE_INSTALL_MANIFEST "install_manifest.txt")
+endif()
+
+string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
+       "${CMAKE_INSTALL_MANIFEST_FILES}")
+file(WRITE "/home/akash/SimpleQuad/quad_ws/build/quad_control/${CMAKE_INSTALL_MANIFEST}"
+     "${CMAKE_INSTALL_MANIFEST_CONTENT}")

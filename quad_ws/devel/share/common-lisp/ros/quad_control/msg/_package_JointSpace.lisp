@@ -1,18 +1,1 @@
-(cl:in-package quad_control-msg)
-(cl:export '(HEADER-VAL
-          HEADER
-          SEQ-VAL
-          SEQ
-          STAMP-VAL
-          STAMP
-          FRAME_ID-VAL
-          FRAME_ID
-          FL_FOOT-VAL
-          FL_FOOT
-          FR_FOOT-VAL
-          FR_FOOT
-          RL_FOOT-VAL
-          RL_FOOT
-          RR_FOOT-VAL
-          RR_FOOT
-))
+/home/akash/SimpleQuad/quad_ws/devel/.private/quad_control/share/common-lisp/ros/quad_control/msg/_package_JointSpace.lisp

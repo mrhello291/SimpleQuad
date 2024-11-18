@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
-  "/home/mrhello/SimpleQuad/quad_ws/devel/share/roseus/ros/quad_control/manifest.l"
-  "/home/mrhello/SimpleQuad/quad_ws/devel/share/roseus/ros/quad_control/msg/Angle.l"
-  "/home/mrhello/SimpleQuad/quad_ws/devel/share/roseus/ros/quad_control/msg/JointSpace.l"
-  "/home/mrhello/SimpleQuad/quad_ws/devel/share/roseus/ros/quad_control/msg/TaskSpace.l"
+  "/home/akash/SimpleQuad/quad_ws/devel/.private/quad_control/share/roseus/ros/quad_control/manifest.l"
+  "/home/akash/SimpleQuad/quad_ws/devel/.private/quad_control/share/roseus/ros/quad_control/msg/Angle.l"
+  "/home/akash/SimpleQuad/quad_ws/devel/.private/quad_control/share/roseus/ros/quad_control/msg/JointSpace.l"
+  "/home/akash/SimpleQuad/quad_ws/devel/.private/quad_control/share/roseus/ros/quad_control/msg/TaskSpace.l"
   "CMakeFiles/quad_control_generate_messages_eus"
 )
 

@@ -1,11 +1,1 @@
-(cl:defpackage quad_control-msg
-  (:use )
-  (:export
-   "<ANGLE>"
-   "ANGLE"
-   "<JOINTSPACE>"
-   "JOINTSPACE"
-   "<TASKSPACE>"
-   "TASKSPACE"
-  ))
-
+/home/akash/SimpleQuad/quad_ws/devel/.private/quad_control/share/common-lisp/ros/quad_control/msg/_package.lisp

@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
-  "/home/mrhello/SimpleQuad/quad_ws/devel/lib/python3/dist-packages/quad_control/msg/_Angle.py"
-  "/home/mrhello/SimpleQuad/quad_ws/devel/lib/python3/dist-packages/quad_control/msg/_JointSpace.py"
-  "/home/mrhello/SimpleQuad/quad_ws/devel/lib/python3/dist-packages/quad_control/msg/_TaskSpace.py"
-  "/home/mrhello/SimpleQuad/quad_ws/devel/lib/python3/dist-packages/quad_control/msg/__init__.py"
+  "/home/akash/SimpleQuad/quad_ws/devel/.private/quad_control/lib/python3/dist-packages/quad_control/msg/_Angle.py"
+  "/home/akash/SimpleQuad/quad_ws/devel/.private/quad_control/lib/python3/dist-packages/quad_control/msg/_JointSpace.py"
+  "/home/akash/SimpleQuad/quad_ws/devel/.private/quad_control/lib/python3/dist-packages/quad_control/msg/_TaskSpace.py"
+  "/home/akash/SimpleQuad/quad_ws/devel/.private/quad_control/lib/python3/dist-packages/quad_control/msg/__init__.py"
   "CMakeFiles/quad_control_generate_messages_py"
 )
 

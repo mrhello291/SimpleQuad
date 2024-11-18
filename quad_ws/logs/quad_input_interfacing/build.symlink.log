@@ -1,0 +1,6 @@
+Symlinking /home/akash/SimpleQuad/quad_ws/devel/lib/python3/dist-packages/quad_input_interfacing/__init__.py
+Symlinking /home/akash/SimpleQuad/quad_ws/devel/lib/pkgconfig/quad_input_interfacing.pc
+Symlinking /home/akash/SimpleQuad/quad_ws/devel/lib/quad_input_interfacing/cmake.lock
+Symlinking /home/akash/SimpleQuad/quad_ws/devel/lib/quad_input_interfacing/Keyboard.py
+Symlinking /home/akash/SimpleQuad/quad_ws/devel/share/quad_input_interfacing/cmake/quad_input_interfacingConfig-version.cmake
+Symlinking /home/akash/SimpleQuad/quad_ws/devel/share/quad_input_interfacing/cmake/quad_input_interfacingConfig.cmake

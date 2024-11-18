@@ -1,2 +1,0 @@
-quad:quad_control:quad_description:quad_gazebo:quad_hardware_interfacing/quad_cam_interfacing:quad_hardware_interfacing/quad_input_interfacing:quad_hardware_interfacing/quad_peripheral_interfacing:quad_hardware_interfacing/quad_servo_interfacing:quad_utilities
--DCATKIN_DEVEL_PREFIX=/home/mrhello/SimpleQuad/quad_ws/devel -DCMAKE_INSTALL_PREFIX=/home/mrhello/SimpleQuad/quad_ws/install -G Unix Makefiles

@@ -1,0 +1,4 @@
+Symlinking /home/akash/SimpleQuad/quad_ws/devel/lib/python3/dist-packages/quad_servo_interfacing/__init__.py
+Symlinking /home/akash/SimpleQuad/quad_ws/devel/lib/pkgconfig/quad_servo_interfacing.pc
+Symlinking /home/akash/SimpleQuad/quad_ws/devel/share/quad_servo_interfacing/cmake/quad_servo_interfacingConfig-version.cmake
+Symlinking /home/akash/SimpleQuad/quad_ws/devel/share/quad_servo_interfacing/cmake/quad_servo_interfacingConfig.cmake

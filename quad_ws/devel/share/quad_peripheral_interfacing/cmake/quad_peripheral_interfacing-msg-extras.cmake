@@ -1,2 +1,1 @@
-set(quad_peripheral_interfacing_MESSAGE_FILES "/home/mrhello/SimpleQuad/quad_ws/src/quad_hardware_interfacing/quad_peripheral_interfacing/msg/ElectricalMeasurements.msg")
-set(quad_peripheral_interfacing_SERVICE_FILES "")
+/home/akash/SimpleQuad/quad_ws/devel/.private/quad_peripheral_interfacing/share/quad_peripheral_interfacing/cmake/quad_peripheral_interfacing-msg-extras.cmake

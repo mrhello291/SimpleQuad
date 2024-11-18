@@ -1,8 +1,1 @@
-prefix=/home/mrhello/SimpleQuad/quad_ws/devel
-
-Name: quad_servo_interfacing
-Description: Description of quad_servo_interfacing
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 
+/home/akash/SimpleQuad/quad_ws/devel/.private/quad_servo_interfacing/lib/pkgconfig/quad_servo_interfacing.pc

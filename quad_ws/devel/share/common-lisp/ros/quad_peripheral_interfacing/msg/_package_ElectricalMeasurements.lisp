@@ -1,6 +1,1 @@
-(cl:in-package quad_peripheral_interfacing-msg)
-(cl:export '(BATTERY_VOLTAGE_LEVEL-VAL
-          BATTERY_VOLTAGE_LEVEL
-          SERVO_BUCK_VOLTAGE_LEVEL-VAL
-          SERVO_BUCK_VOLTAGE_LEVEL
-))
+/home/akash/SimpleQuad/quad_ws/devel/.private/quad_peripheral_interfacing/share/common-lisp/ros/quad_peripheral_interfacing/msg/_package_ElectricalMeasurements.lisp

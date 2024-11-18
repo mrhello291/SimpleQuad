@@ -22,9 +22,9 @@ class HardwareInterface():
                 #  2  [front_right_lower, front_left_lower, back_right_lower, back_left_lower]] 
 
            'pins' define the physical pin of the servos on the servoboard """
-        self.pins = np.array([[14,10,2,6], 
-                              [13,9,1,5], 
-                              [12,8,0,4]])
+        self.pins = np.array([[14,10,6,2], 
+                              [13,9,5,1], 
+                              [12,8,4,0]])
 
         """ 'servo_multipliers' and 'complementary_angle' both work to flip some angles, x, to (180-x) so that movement on each leg is consistent despite
             physical motor oritentation changes """

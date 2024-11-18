@@ -13,21 +13,21 @@ fi
 
 echo_and_run() { echo "+ $@" ; "$@" ; }
 
-echo_and_run cd "/home/mrhello/SimpleQuad/quad_ws/src/quad"
+echo_and_run cd "/home/akash/SimpleQuad/quad_ws/src/quad"
 
 # ensure that Python install destination exists
-echo_and_run mkdir -p "$DESTDIR/home/mrhello/SimpleQuad/quad_ws/install/lib/python3/dist-packages"
+echo_and_run mkdir -p "$DESTDIR/home/akash/SimpleQuad/quad_ws/install/lib/python3/dist-packages"
 
 # Note that PYTHONPATH is pulled from the environment to support installing
 # into one location when some dependencies were installed in another
 # location, #123.
 echo_and_run /usr/bin/env \
-    PYTHONPATH="/home/mrhello/SimpleQuad/quad_ws/install/lib/python3/dist-packages:/home/mrhello/SimpleQuad/quad_ws/build/lib/python3/dist-packages:$PYTHONPATH" \
-    CATKIN_BINARY_DIR="/home/mrhello/SimpleQuad/quad_ws/build" \
+    PYTHONPATH="/home/akash/SimpleQuad/quad_ws/install/lib/python3/dist-packages:/home/akash/SimpleQuad/quad_ws/build/quad/lib/python3/dist-packages:$PYTHONPATH" \
+    CATKIN_BINARY_DIR="/home/akash/SimpleQuad/quad_ws/build/quad" \
     "/usr/bin/python3" \
-    "/home/mrhello/SimpleQuad/quad_ws/src/quad/setup.py" \
+    "/home/akash/SimpleQuad/quad_ws/src/quad/setup.py" \
      \
-    build --build-base "/home/mrhello/SimpleQuad/quad_ws/build/quad" \
+    build --build-base "/home/akash/SimpleQuad/quad_ws/build/quad" \
     install \
     --root="${DESTDIR-/}" \
-    --install-layout=deb --prefix="/home/mrhello/SimpleQuad/quad_ws/install" --install-scripts="/home/mrhello/SimpleQuad/quad_ws/install/bin"
+    --install-layout=deb --prefix="/home/akash/SimpleQuad/quad_ws/install" --install-scripts="/home/akash/SimpleQuad/quad_ws/install/bin"

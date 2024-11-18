@@ -64,8 +64,8 @@ class Configuration:
         )
 
         ######################## GEOMETRY ######################
-        self.LEG_FB = 0.11165 #   front-back distance from center line to leg axis
-        self.LEG_LR = 0.061  # left-right distance from center line to leg plane
+        self.LEG_FB = 0.21 #   front-back distance from center line to leg axis
+        self.LEG_LR = 0.11  # left-right distance from center line to leg plane
         self.LEG_ORIGINS = np.array( #Origins of the initial frame from the centre of the body
             [
                 [self.LEG_FB, self.LEG_FB, -self.LEG_FB, -self.LEG_FB],
@@ -75,29 +75,30 @@ class Configuration:
         )
 
         #Leg lengths
-        self.L1 = 0.05162024721
-        self.L2 = 0.130
-        self.L3 = 0.13813664159
-        self.phi = m.radians(73.91738698)
+        self.L1 = 0.0617
+        self.L2 = 0.1475
+        self.L3 = 0.1726
+        self.phi = m.radians(90)
         
         ################### INERTIAL ####################
-        self.FRAME_MASS = 0.560  # kg
-        self.MODULE_MASS = 0.080  # kg
-        self.LEG_MASS = 0.030  # kg
+        #Upper leg -> 35gm, Lower Leg -> 82gm(42gm without ankle), first link = 1.8gm, nextlink = 3gm, plate link = 28gm, finallink=7.7gm (So net extras=40gm added to the 250gm module makes 290gm)
+        self.FRAME_MASS = 1.820  # kg
+        self.MODULE_MASS = 0.289  # kg
+        self.LEG_MASS = 0.117  # kg
         self.MASS = self.FRAME_MASS + (self.MODULE_MASS + self.LEG_MASS) * 4
 
-        # Compensation factor of 3 because the inertia measurement was just
+        # Compensation factor of 2 because the inertia measurement was just
         # of the carbon fiber and plastic parts of the frame and did not
         # include the hip servos and electronics
         self.FRAME_INERTIA = tuple(
-            map(lambda x: 3.0 * x, (1.844e-4, 1.254e-3, 1.337e-3))
+            map(lambda x: 2 * x, (0.006894, 0.0119693, 0.015379))
         )
-        self.MODULE_INERTIA = (3.698e-5, 7.127e-6, 4.075e-5)
+        self.MODULE_INERTIA = (3.698e-4, 7.127e-5, 4.075e-4) #I just multiplied all by 10
 
-        leg_z = 1e-6
-        leg_mass = 0.010
-        leg_x = 1 / 12 * self.L2 ** 2 * leg_mass
-        leg_y = leg_x
+        leg_z = 1.347e-5
+        # leg_x = 1 / 12 * self.L2 ** 2 * leg_mass => I will take length as avg of L2 and L3 and took leg_mass as 0.50 and used the hollow cuboid script
+        leg_x = 1.324e-4
+        leg_y =1.289e-4
         self.LEG_INERTIA = (leg_x, leg_y, leg_z)
 
     @property

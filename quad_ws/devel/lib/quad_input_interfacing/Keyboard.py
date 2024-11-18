@@ -1,15 +1,1 @@
-#!/usr/bin/python3
-# -*- coding: utf-8 -*-
-# generated from catkin/cmake/template/script.py.in
-# creates a relay to a python script source file, acting as that file.
-# The purpose is that of a symlink
-python_script = '/home/mrhello/SimpleQuad/quad_ws/src/quad_hardware_interfacing/quad_input_interfacing/scripts/Keyboard.py'
-with open(python_script, 'r') as fh:
-    context = {
-        '__builtins__': __builtins__,
-        '__doc__': None,
-        '__file__': python_script,
-        '__name__': __name__,
-        '__package__': None,
-    }
-    exec(compile(fh.read(), python_script, 'exec'), context)
+/home/akash/SimpleQuad/quad_ws/devel/.private/quad_input_interfacing/lib/quad_input_interfacing/Keyboard.py

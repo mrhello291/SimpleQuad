@@ -1,1 +1,1 @@
-from ._ElectricalMeasurements import *
+/home/akash/SimpleQuad/quad_ws/devel/.private/quad_peripheral_interfacing/lib/python3/dist-packages/quad_peripheral_interfacing/msg/__init__.py

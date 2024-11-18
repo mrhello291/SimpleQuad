@@ -4,5 +4,5 @@ PROJECT_PKG_CONFIG_INCLUDE_DIRS = "".split(';') if "" != "" else []
 PROJECT_CATKIN_DEPENDS = "".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "".split(';') if "" != "" else []
 PROJECT_NAME = "quad_utilities"
-PROJECT_SPACE_DIR = "/home/mrhello/SimpleQuad/quad_ws/install"
+PROJECT_SPACE_DIR = "/home/akash/SimpleQuad/quad_ws/install"
 PROJECT_VERSION = "0.0.0"

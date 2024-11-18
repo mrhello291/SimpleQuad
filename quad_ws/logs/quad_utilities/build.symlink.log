@@ -1,0 +1,4 @@
+Symlinking /home/akash/SimpleQuad/quad_ws/devel/lib/python3/dist-packages/quad_utilities/__init__.py
+Symlinking /home/akash/SimpleQuad/quad_ws/devel/lib/pkgconfig/quad_utilities.pc
+Symlinking /home/akash/SimpleQuad/quad_ws/devel/share/quad_utilities/cmake/quad_utilitiesConfig.cmake
+Symlinking /home/akash/SimpleQuad/quad_ws/devel/share/quad_utilities/cmake/quad_utilitiesConfig-version.cmake

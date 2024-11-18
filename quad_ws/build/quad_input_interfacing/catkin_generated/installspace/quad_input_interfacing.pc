@@ -1,0 +1,8 @@
+prefix=/home/akash/SimpleQuad/quad_ws/install
+
+Name: quad_input_interfacing
+Description: Description of quad_input_interfacing
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
