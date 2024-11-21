@@ -1,1 +1,1 @@
-/home/akash/SimpleQuad/quad_ws/devel/.private/quad_control/share/gennodejs/ros/quad_control/msg/_index.js
+/home/mrhello/SimpleQuad/quad_ws/devel/.private/quad_control/share/gennodejs/ros/quad_control/msg/_index.js

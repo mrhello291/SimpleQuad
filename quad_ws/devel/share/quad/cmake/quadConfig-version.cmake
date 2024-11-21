@@ -1,1 +1,1 @@
-/home/akash/SimpleQuad/quad_ws/devel/.private/quad/share/quad/cmake/quadConfig-version.cmake
+/home/mrhello/SimpleQuad/quad_ws/devel/.private/quad/share/quad/cmake/quadConfig-version.cmake

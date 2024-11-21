@@ -1,4 +1,4 @@
-prefix=/home/akash/SimpleQuad/quad_ws/install
+prefix=/home/mrhello/SimpleQuad/quad_ws/install
 
 Name: quad
 Description: Description of quad

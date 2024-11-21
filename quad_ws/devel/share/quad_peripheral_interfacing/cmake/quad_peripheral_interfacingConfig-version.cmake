@@ -1,1 +1,1 @@
-/home/akash/SimpleQuad/quad_ws/devel/.private/quad_peripheral_interfacing/share/quad_peripheral_interfacing/cmake/quad_peripheral_interfacingConfig-version.cmake
+/home/mrhello/SimpleQuad/quad_ws/devel/.private/quad_peripheral_interfacing/share/quad_peripheral_interfacing/cmake/quad_peripheral_interfacingConfig-version.cmake

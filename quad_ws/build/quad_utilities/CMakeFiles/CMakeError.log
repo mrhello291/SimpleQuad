@@ -1,21 +1,21 @@
 Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
-Change Dir: /home/akash/SimpleQuad/quad_ws/build/quad_utilities/CMakeFiles/CMakeTmp
+Change Dir: /home/mrhello/SimpleQuad/quad_ws/build/quad_utilities/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_8bd7a/fast && /usr/bin/make -f CMakeFiles/cmTC_8bd7a.dir/build.make CMakeFiles/cmTC_8bd7a.dir/build
-make[1]: Entering directory '/home/akash/SimpleQuad/quad_ws/build/quad_utilities/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_8bd7a.dir/src.c.o
-/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_8bd7a.dir/src.c.o   -c /home/akash/SimpleQuad/quad_ws/build/quad_utilities/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_8bd7a
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8bd7a.dir/link.txt --verbose=1
-/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    -rdynamic CMakeFiles/cmTC_8bd7a.dir/src.c.o  -o cmTC_8bd7a 
-/usr/bin/ld: CMakeFiles/cmTC_8bd7a.dir/src.c.o: in function `main':
-src.c:(.text+0x46): undefined reference to `pthread_create'
-/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
-/usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
+Run Build Command(s):/usr/bin/make cmTC_823eb/fast && /usr/bin/make -f CMakeFiles/cmTC_823eb.dir/build.make CMakeFiles/cmTC_823eb.dir/build
+make[1]: Entering directory '/home/mrhello/SimpleQuad/quad_ws/build/quad_utilities/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_823eb.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_823eb.dir/src.c.o   -c /home/mrhello/SimpleQuad/quad_ws/build/quad_utilities/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_823eb
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_823eb.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    -rdynamic CMakeFiles/cmTC_823eb.dir/src.c.o  -o cmTC_823eb 
+/usr/bin/ld: CMakeFiles/cmTC_823eb.dir/src.c.o: in function `main':
+src.c:(.text+0x48): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x50): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x5c): undefined reference to `pthread_join'
 collect2: error: ld returned 1 exit status
-make[1]: *** [CMakeFiles/cmTC_8bd7a.dir/build.make:87: cmTC_8bd7a] Error 1
-make[1]: Leaving directory '/home/akash/SimpleQuad/quad_ws/build/quad_utilities/CMakeFiles/CMakeTmp'
-make: *** [Makefile:121: cmTC_8bd7a/fast] Error 2
+make[1]: *** [CMakeFiles/cmTC_823eb.dir/build.make:87: cmTC_823eb] Error 1
+make[1]: Leaving directory '/home/mrhello/SimpleQuad/quad_ws/build/quad_utilities/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_823eb/fast] Error 2
 
 
 Source file was:
@@ -39,20 +39,20 @@ int main(void)
 }
 
 Determining if the function pthread_create exists in the pthreads failed with the following output:
-Change Dir: /home/akash/SimpleQuad/quad_ws/build/quad_utilities/CMakeFiles/CMakeTmp
+Change Dir: /home/mrhello/SimpleQuad/quad_ws/build/quad_utilities/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_929ea/fast && /usr/bin/make -f CMakeFiles/cmTC_929ea.dir/build.make CMakeFiles/cmTC_929ea.dir/build
-make[1]: Entering directory '/home/akash/SimpleQuad/quad_ws/build/quad_utilities/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_929ea.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_929ea.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
-Linking C executable cmTC_929ea
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_929ea.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_929ea.dir/CheckFunctionExists.c.o  -o cmTC_929ea  -lpthreads 
+Run Build Command(s):/usr/bin/make cmTC_d2031/fast && /usr/bin/make -f CMakeFiles/cmTC_d2031.dir/build.make CMakeFiles/cmTC_d2031.dir/build
+make[1]: Entering directory '/home/mrhello/SimpleQuad/quad_ws/build/quad_utilities/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_d2031.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_d2031.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_d2031
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d2031.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_d2031.dir/CheckFunctionExists.c.o  -o cmTC_d2031  -lpthreads 
 /usr/bin/ld: cannot find -lpthreads
 collect2: error: ld returned 1 exit status
-make[1]: *** [CMakeFiles/cmTC_929ea.dir/build.make:87: cmTC_929ea] Error 1
-make[1]: Leaving directory '/home/akash/SimpleQuad/quad_ws/build/quad_utilities/CMakeFiles/CMakeTmp'
-make: *** [Makefile:121: cmTC_929ea/fast] Error 2
+make[1]: *** [CMakeFiles/cmTC_d2031.dir/build.make:87: cmTC_d2031] Error 1
+make[1]: Leaving directory '/home/mrhello/SimpleQuad/quad_ws/build/quad_utilities/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_d2031/fast] Error 2
 
 
 

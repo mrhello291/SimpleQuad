@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/akash/SimpleQuad/quad_ws/src/quad_hardware_interfacing/quad_peripheral_interfacing
+CMAKE_SOURCE_DIR = /home/mrhello/SimpleQuad/quad_ws/src/quad_hardware_interfacing/quad_peripheral_interfacing
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/akash/SimpleQuad/quad_ws/build/quad_peripheral_interfacing
+CMAKE_BINARY_DIR = /home/mrhello/SimpleQuad/quad_ws/build/quad_peripheral_interfacing
 
 # Utility rule file for std_msgs_generate_messages_nodejs.
 
@@ -67,6 +67,6 @@ CMakeFiles/std_msgs_generate_messages_nodejs.dir/clean:
 .PHONY : CMakeFiles/std_msgs_generate_messages_nodejs.dir/clean
 
 CMakeFiles/std_msgs_generate_messages_nodejs.dir/depend:
-	cd /home/akash/SimpleQuad/quad_ws/build/quad_peripheral_interfacing && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/akash/SimpleQuad/quad_ws/src/quad_hardware_interfacing/quad_peripheral_interfacing /home/akash/SimpleQuad/quad_ws/src/quad_hardware_interfacing/quad_peripheral_interfacing /home/akash/SimpleQuad/quad_ws/build/quad_peripheral_interfacing /home/akash/SimpleQuad/quad_ws/build/quad_peripheral_interfacing /home/akash/SimpleQuad/quad_ws/build/quad_peripheral_interfacing/CMakeFiles/std_msgs_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/mrhello/SimpleQuad/quad_ws/build/quad_peripheral_interfacing && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/mrhello/SimpleQuad/quad_ws/src/quad_hardware_interfacing/quad_peripheral_interfacing /home/mrhello/SimpleQuad/quad_ws/src/quad_hardware_interfacing/quad_peripheral_interfacing /home/mrhello/SimpleQuad/quad_ws/build/quad_peripheral_interfacing /home/mrhello/SimpleQuad/quad_ws/build/quad_peripheral_interfacing /home/mrhello/SimpleQuad/quad_ws/build/quad_peripheral_interfacing/CMakeFiles/std_msgs_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/std_msgs_generate_messages_nodejs.dir/depend
 

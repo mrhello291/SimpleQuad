@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/akash/SimpleQuad/quad_ws/src/quad_gazebo
+CMAKE_SOURCE_DIR = /home/mrhello/SimpleQuad/quad_ws/src/quad_gazebo
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/akash/SimpleQuad/quad_ws/build/quad_gazebo
+CMAKE_BINARY_DIR = /home/mrhello/SimpleQuad/quad_ws/build/quad_gazebo
 
 # Utility rule file for _catkin_empty_exported_target.
 
@@ -67,6 +67,6 @@ CMakeFiles/_catkin_empty_exported_target.dir/clean:
 .PHONY : CMakeFiles/_catkin_empty_exported_target.dir/clean
 
 CMakeFiles/_catkin_empty_exported_target.dir/depend:
-	cd /home/akash/SimpleQuad/quad_ws/build/quad_gazebo && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/akash/SimpleQuad/quad_ws/src/quad_gazebo /home/akash/SimpleQuad/quad_ws/src/quad_gazebo /home/akash/SimpleQuad/quad_ws/build/quad_gazebo /home/akash/SimpleQuad/quad_ws/build/quad_gazebo /home/akash/SimpleQuad/quad_ws/build/quad_gazebo/CMakeFiles/_catkin_empty_exported_target.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/mrhello/SimpleQuad/quad_ws/build/quad_gazebo && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/mrhello/SimpleQuad/quad_ws/src/quad_gazebo /home/mrhello/SimpleQuad/quad_ws/src/quad_gazebo /home/mrhello/SimpleQuad/quad_ws/build/quad_gazebo /home/mrhello/SimpleQuad/quad_ws/build/quad_gazebo /home/mrhello/SimpleQuad/quad_ws/build/quad_gazebo/CMakeFiles/_catkin_empty_exported_target.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/_catkin_empty_exported_target.dir/depend
 

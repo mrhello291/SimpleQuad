@@ -3,7 +3,7 @@
 # generated from catkin/cmake/template/script.py.in
 # creates a relay to a python script source file, acting as that file.
 # The purpose is that of a symlink
-python_script = '/home/akash/SimpleQuad/quad_ws/src/quad_hardware_interfacing/quad_input_interfacing/scripts/Keyboard.py'
+python_script = '/home/mrhello/SimpleQuad/quad_ws/src/quad_hardware_interfacing/quad_input_interfacing/scripts/Keyboard.py'
 with open(python_script, 'r') as fh:
     context = {
         '__builtins__': __builtins__,

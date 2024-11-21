@@ -1,1 +1,1 @@
-/home/akash/SimpleQuad/quad_ws/devel/.private/quad_cam_interfacing/share/quad_cam_interfacing/cmake/quad_cam_interfacingConfig.cmake
+/home/mrhello/SimpleQuad/quad_ws/devel/.private/quad_cam_interfacing/share/quad_cam_interfacing/cmake/quad_cam_interfacingConfig.cmake

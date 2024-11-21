@@ -1,4 +1,4 @@
-prefix=/home/akash/SimpleQuad/quad_ws/devel/.private/quad_cam_interfacing
+prefix=/home/mrhello/SimpleQuad/quad_ws/devel/.private/quad_cam_interfacing
 
 Name: quad_cam_interfacing
 Description: Description of quad_cam_interfacing

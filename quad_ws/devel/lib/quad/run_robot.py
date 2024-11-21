@@ -1,1 +1,1 @@
-/home/akash/SimpleQuad/quad_ws/devel/.private/quad/lib/quad/run_robot.py
+/home/mrhello/SimpleQuad/quad_ws/devel/.private/quad/lib/quad/run_robot.py

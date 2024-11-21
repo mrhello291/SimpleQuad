@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "/home/akash/SimpleQuad/quad_ws/devel/.private/quad_peripheral_interfacing/share/gennodejs/ros/quad_peripheral_interfacing/msg/ElectricalMeasurements.js"
+  "/home/mrhello/SimpleQuad/quad_ws/devel/.private/quad_peripheral_interfacing/share/gennodejs/ros/quad_peripheral_interfacing/msg/ElectricalMeasurements.js"
   "CMakeFiles/quad_peripheral_interfacing_generate_messages_nodejs"
 )
 

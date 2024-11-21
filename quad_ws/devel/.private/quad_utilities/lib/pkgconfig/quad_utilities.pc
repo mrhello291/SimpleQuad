@@ -1,4 +1,4 @@
-prefix=/home/akash/SimpleQuad/quad_ws/devel/.private/quad_utilities
+prefix=/home/mrhello/SimpleQuad/quad_ws/devel/.private/quad_utilities
 
 Name: quad_utilities
 Description: Description of quad_utilities

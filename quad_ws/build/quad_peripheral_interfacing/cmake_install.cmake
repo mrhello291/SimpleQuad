@@ -1,8 +1,8 @@
-# Install script for directory: /home/akash/SimpleQuad/quad_ws/src/quad_hardware_interfacing/quad_peripheral_interfacing
+# Install script for directory: /home/mrhello/SimpleQuad/quad_ws/src/quad_hardware_interfacing/quad_peripheral_interfacing
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/akash/SimpleQuad/quad_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/mrhello/SimpleQuad/quad_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -49,151 +49,151 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/akash/SimpleQuad/quad_ws/install/_setup_util.py")
+   "/home/mrhello/SimpleQuad/quad_ws/install/_setup_util.py")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/akash/SimpleQuad/quad_ws/install" TYPE PROGRAM FILES "/home/akash/SimpleQuad/quad_ws/build/quad_peripheral_interfacing/catkin_generated/installspace/_setup_util.py")
+file(INSTALL DESTINATION "/home/mrhello/SimpleQuad/quad_ws/install" TYPE PROGRAM FILES "/home/mrhello/SimpleQuad/quad_ws/build/quad_peripheral_interfacing/catkin_generated/installspace/_setup_util.py")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/akash/SimpleQuad/quad_ws/install/env.sh")
+   "/home/mrhello/SimpleQuad/quad_ws/install/env.sh")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/akash/SimpleQuad/quad_ws/install" TYPE PROGRAM FILES "/home/akash/SimpleQuad/quad_ws/build/quad_peripheral_interfacing/catkin_generated/installspace/env.sh")
+file(INSTALL DESTINATION "/home/mrhello/SimpleQuad/quad_ws/install" TYPE PROGRAM FILES "/home/mrhello/SimpleQuad/quad_ws/build/quad_peripheral_interfacing/catkin_generated/installspace/env.sh")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/akash/SimpleQuad/quad_ws/install/setup.bash;/home/akash/SimpleQuad/quad_ws/install/local_setup.bash")
+   "/home/mrhello/SimpleQuad/quad_ws/install/setup.bash;/home/mrhello/SimpleQuad/quad_ws/install/local_setup.bash")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/akash/SimpleQuad/quad_ws/install" TYPE FILE FILES
-    "/home/akash/SimpleQuad/quad_ws/build/quad_peripheral_interfacing/catkin_generated/installspace/setup.bash"
-    "/home/akash/SimpleQuad/quad_ws/build/quad_peripheral_interfacing/catkin_generated/installspace/local_setup.bash"
+file(INSTALL DESTINATION "/home/mrhello/SimpleQuad/quad_ws/install" TYPE FILE FILES
+    "/home/mrhello/SimpleQuad/quad_ws/build/quad_peripheral_interfacing/catkin_generated/installspace/setup.bash"
+    "/home/mrhello/SimpleQuad/quad_ws/build/quad_peripheral_interfacing/catkin_generated/installspace/local_setup.bash"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/akash/SimpleQuad/quad_ws/install/setup.sh;/home/akash/SimpleQuad/quad_ws/install/local_setup.sh")
+   "/home/mrhello/SimpleQuad/quad_ws/install/setup.sh;/home/mrhello/SimpleQuad/quad_ws/install/local_setup.sh")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/akash/SimpleQuad/quad_ws/install" TYPE FILE FILES
-    "/home/akash/SimpleQuad/quad_ws/build/quad_peripheral_interfacing/catkin_generated/installspace/setup.sh"
-    "/home/akash/SimpleQuad/quad_ws/build/quad_peripheral_interfacing/catkin_generated/installspace/local_setup.sh"
+file(INSTALL DESTINATION "/home/mrhello/SimpleQuad/quad_ws/install" TYPE FILE FILES
+    "/home/mrhello/SimpleQuad/quad_ws/build/quad_peripheral_interfacing/catkin_generated/installspace/setup.sh"
+    "/home/mrhello/SimpleQuad/quad_ws/build/quad_peripheral_interfacing/catkin_generated/installspace/local_setup.sh"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/akash/SimpleQuad/quad_ws/install/setup.zsh;/home/akash/SimpleQuad/quad_ws/install/local_setup.zsh")
+   "/home/mrhello/SimpleQuad/quad_ws/install/setup.zsh;/home/mrhello/SimpleQuad/quad_ws/install/local_setup.zsh")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/akash/SimpleQuad/quad_ws/install" TYPE FILE FILES
-    "/home/akash/SimpleQuad/quad_ws/build/quad_peripheral_interfacing/catkin_generated/installspace/setup.zsh"
-    "/home/akash/SimpleQuad/quad_ws/build/quad_peripheral_interfacing/catkin_generated/installspace/local_setup.zsh"
+file(INSTALL DESTINATION "/home/mrhello/SimpleQuad/quad_ws/install" TYPE FILE FILES
+    "/home/mrhello/SimpleQuad/quad_ws/build/quad_peripheral_interfacing/catkin_generated/installspace/setup.zsh"
+    "/home/mrhello/SimpleQuad/quad_ws/build/quad_peripheral_interfacing/catkin_generated/installspace/local_setup.zsh"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/akash/SimpleQuad/quad_ws/install/.rosinstall")
+   "/home/mrhello/SimpleQuad/quad_ws/install/.rosinstall")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/akash/SimpleQuad/quad_ws/install" TYPE FILE FILES "/home/akash/SimpleQuad/quad_ws/build/quad_peripheral_interfacing/catkin_generated/installspace/.rosinstall")
+file(INSTALL DESTINATION "/home/mrhello/SimpleQuad/quad_ws/install" TYPE FILE FILES "/home/mrhello/SimpleQuad/quad_ws/build/quad_peripheral_interfacing/catkin_generated/installspace/.rosinstall")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  include("/home/akash/SimpleQuad/quad_ws/build/quad_peripheral_interfacing/catkin_generated/safe_execute_install.cmake")
+  include("/home/mrhello/SimpleQuad/quad_ws/build/quad_peripheral_interfacing/catkin_generated/safe_execute_install.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/quad_peripheral_interfacing/msg" TYPE FILE FILES "/home/akash/SimpleQuad/quad_ws/src/quad_hardware_interfacing/quad_peripheral_interfacing/msg/ElectricalMeasurements.msg")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/quad_peripheral_interfacing/msg" TYPE FILE FILES "/home/mrhello/SimpleQuad/quad_ws/src/quad_hardware_interfacing/quad_peripheral_interfacing/msg/ElectricalMeasurements.msg")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/quad_peripheral_interfacing/cmake" TYPE FILE FILES "/home/akash/SimpleQuad/quad_ws/build/quad_peripheral_interfacing/catkin_generated/installspace/quad_peripheral_interfacing-msg-paths.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/quad_peripheral_interfacing/cmake" TYPE FILE FILES "/home/mrhello/SimpleQuad/quad_ws/build/quad_peripheral_interfacing/catkin_generated/installspace/quad_peripheral_interfacing-msg-paths.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/akash/SimpleQuad/quad_ws/devel/.private/quad_peripheral_interfacing/include/quad_peripheral_interfacing")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/mrhello/SimpleQuad/quad_ws/devel/.private/quad_peripheral_interfacing/include/quad_peripheral_interfacing")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/akash/SimpleQuad/quad_ws/devel/.private/quad_peripheral_interfacing/share/roseus/ros/quad_peripheral_interfacing")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/mrhello/SimpleQuad/quad_ws/devel/.private/quad_peripheral_interfacing/share/roseus/ros/quad_peripheral_interfacing")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/akash/SimpleQuad/quad_ws/devel/.private/quad_peripheral_interfacing/share/common-lisp/ros/quad_peripheral_interfacing")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/mrhello/SimpleQuad/quad_ws/devel/.private/quad_peripheral_interfacing/share/common-lisp/ros/quad_peripheral_interfacing")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/akash/SimpleQuad/quad_ws/devel/.private/quad_peripheral_interfacing/share/gennodejs/ros/quad_peripheral_interfacing")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/mrhello/SimpleQuad/quad_ws/devel/.private/quad_peripheral_interfacing/share/gennodejs/ros/quad_peripheral_interfacing")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  execute_process(COMMAND "/usr/bin/python3" -m compileall "/home/akash/SimpleQuad/quad_ws/devel/.private/quad_peripheral_interfacing/lib/python3/dist-packages/quad_peripheral_interfacing")
+  execute_process(COMMAND "/usr/bin/python3" -m compileall "/home/mrhello/SimpleQuad/quad_ws/devel/.private/quad_peripheral_interfacing/lib/python3/dist-packages/quad_peripheral_interfacing")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages" TYPE DIRECTORY FILES "/home/akash/SimpleQuad/quad_ws/devel/.private/quad_peripheral_interfacing/lib/python3/dist-packages/quad_peripheral_interfacing" REGEX "/\\_\\_init\\_\\_\\.py$" EXCLUDE REGEX "/\\_\\_init\\_\\_\\.pyc$" EXCLUDE)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages" TYPE DIRECTORY FILES "/home/mrhello/SimpleQuad/quad_ws/devel/.private/quad_peripheral_interfacing/lib/python3/dist-packages/quad_peripheral_interfacing" REGEX "/\\_\\_init\\_\\_\\.py$" EXCLUDE REGEX "/\\_\\_init\\_\\_\\.pyc$" EXCLUDE)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages" TYPE DIRECTORY FILES "/home/akash/SimpleQuad/quad_ws/devel/.private/quad_peripheral_interfacing/lib/python3/dist-packages/quad_peripheral_interfacing" FILES_MATCHING REGEX "/home/akash/SimpleQuad/quad_ws/devel/\\.private/quad_peripheral_interfacing/lib/python3/dist-packages/quad_peripheral_interfacing/.+/__init__.pyc?$")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages" TYPE DIRECTORY FILES "/home/mrhello/SimpleQuad/quad_ws/devel/.private/quad_peripheral_interfacing/lib/python3/dist-packages/quad_peripheral_interfacing" FILES_MATCHING REGEX "/home/mrhello/SimpleQuad/quad_ws/devel/\\.private/quad_peripheral_interfacing/lib/python3/dist-packages/quad_peripheral_interfacing/.+/__init__.pyc?$")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/akash/SimpleQuad/quad_ws/build/quad_peripheral_interfacing/catkin_generated/installspace/quad_peripheral_interfacing.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/mrhello/SimpleQuad/quad_ws/build/quad_peripheral_interfacing/catkin_generated/installspace/quad_peripheral_interfacing.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/quad_peripheral_interfacing/cmake" TYPE FILE FILES "/home/akash/SimpleQuad/quad_ws/build/quad_peripheral_interfacing/catkin_generated/installspace/quad_peripheral_interfacing-msg-extras.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/quad_peripheral_interfacing/cmake" TYPE FILE FILES "/home/mrhello/SimpleQuad/quad_ws/build/quad_peripheral_interfacing/catkin_generated/installspace/quad_peripheral_interfacing-msg-extras.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/quad_peripheral_interfacing/cmake" TYPE FILE FILES
-    "/home/akash/SimpleQuad/quad_ws/build/quad_peripheral_interfacing/catkin_generated/installspace/quad_peripheral_interfacingConfig.cmake"
-    "/home/akash/SimpleQuad/quad_ws/build/quad_peripheral_interfacing/catkin_generated/installspace/quad_peripheral_interfacingConfig-version.cmake"
+    "/home/mrhello/SimpleQuad/quad_ws/build/quad_peripheral_interfacing/catkin_generated/installspace/quad_peripheral_interfacingConfig.cmake"
+    "/home/mrhello/SimpleQuad/quad_ws/build/quad_peripheral_interfacing/catkin_generated/installspace/quad_peripheral_interfacingConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/quad_peripheral_interfacing" TYPE FILE FILES "/home/akash/SimpleQuad/quad_ws/src/quad_hardware_interfacing/quad_peripheral_interfacing/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/quad_peripheral_interfacing" TYPE FILE FILES "/home/mrhello/SimpleQuad/quad_ws/src/quad_hardware_interfacing/quad_peripheral_interfacing/package.xml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/quad_peripheral_interfacing" TYPE PROGRAM FILES "/home/akash/SimpleQuad/quad_ws/build/quad_peripheral_interfacing/catkin_generated/installspace/battery_voltage_checking.py")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/quad_peripheral_interfacing" TYPE PROGRAM FILES "/home/mrhello/SimpleQuad/quad_ws/build/quad_peripheral_interfacing/catkin_generated/installspace/battery_voltage_checking.py")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/akash/SimpleQuad/quad_ws/build/quad_peripheral_interfacing/gtest/cmake_install.cmake")
+  include("/home/mrhello/SimpleQuad/quad_ws/build/quad_peripheral_interfacing/gtest/cmake_install.cmake")
 
 endif()
 
@@ -205,5 +205,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/akash/SimpleQuad/quad_ws/build/quad_peripheral_interfacing/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/mrhello/SimpleQuad/quad_ws/build/quad_peripheral_interfacing/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

@@ -1,1 +1,1 @@
-/home/akash/SimpleQuad/quad_ws/devel/.private/quad_utilities/lib/pkgconfig/quad_utilities.pc
+/home/mrhello/SimpleQuad/quad_ws/devel/.private/quad_utilities/lib/pkgconfig/quad_utilities.pc

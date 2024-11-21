@@ -1,1 +1,1 @@
-/home/akash/SimpleQuad/quad_ws/devel/.private/quad_servo_interfacing/share/quad_servo_interfacing/cmake/quad_servo_interfacingConfig-version.cmake
+/home/mrhello/SimpleQuad/quad_ws/devel/.private/quad_servo_interfacing/share/quad_servo_interfacing/cmake/quad_servo_interfacingConfig-version.cmake

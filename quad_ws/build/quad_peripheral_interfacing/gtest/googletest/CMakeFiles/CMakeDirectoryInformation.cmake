@@ -3,7 +3,7 @@
 
 # Relative path conversion top directories.
 set(CMAKE_RELATIVE_PATH_TOP_SOURCE "/usr/src/googletest")
-set(CMAKE_RELATIVE_PATH_TOP_BINARY "/home/akash/SimpleQuad/quad_ws/build/quad_peripheral_interfacing")
+set(CMAKE_RELATIVE_PATH_TOP_BINARY "/home/mrhello/SimpleQuad/quad_ws/build/quad_peripheral_interfacing")
 
 # Force unix paths in dependencies.
 set(CMAKE_FORCE_UNIX_PATHS 1)

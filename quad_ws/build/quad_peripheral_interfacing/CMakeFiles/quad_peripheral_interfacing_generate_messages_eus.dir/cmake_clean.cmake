@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/akash/SimpleQuad/quad_ws/devel/.private/quad_peripheral_interfacing/share/roseus/ros/quad_peripheral_interfacing/manifest.l"
-  "/home/akash/SimpleQuad/quad_ws/devel/.private/quad_peripheral_interfacing/share/roseus/ros/quad_peripheral_interfacing/msg/ElectricalMeasurements.l"
+  "/home/mrhello/SimpleQuad/quad_ws/devel/.private/quad_peripheral_interfacing/share/roseus/ros/quad_peripheral_interfacing/manifest.l"
+  "/home/mrhello/SimpleQuad/quad_ws/devel/.private/quad_peripheral_interfacing/share/roseus/ros/quad_peripheral_interfacing/msg/ElectricalMeasurements.l"
   "CMakeFiles/quad_peripheral_interfacing_generate_messages_eus"
 )
 

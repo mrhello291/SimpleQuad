@@ -1,1 +1,1 @@
-/home/akash/SimpleQuad/quad_ws/devel/.private/quad_utilities/share/quad_utilities/cmake/quad_utilitiesConfig.cmake
+/home/mrhello/SimpleQuad/quad_ws/devel/.private/quad_utilities/share/quad_utilities/cmake/quad_utilitiesConfig.cmake

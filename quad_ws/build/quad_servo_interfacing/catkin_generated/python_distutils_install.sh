@@ -13,21 +13,21 @@ fi
 
 echo_and_run() { echo "+ $@" ; "$@" ; }
 
-echo_and_run cd "/home/akash/SimpleQuad/quad_ws/src/quad_hardware_interfacing/quad_servo_interfacing"
+echo_and_run cd "/home/mrhello/SimpleQuad/quad_ws/src/quad_hardware_interfacing/quad_servo_interfacing"
 
 # ensure that Python install destination exists
-echo_and_run mkdir -p "$DESTDIR/home/akash/SimpleQuad/quad_ws/install/lib/python3/dist-packages"
+echo_and_run mkdir -p "$DESTDIR/home/mrhello/SimpleQuad/quad_ws/install/lib/python3/dist-packages"
 
 # Note that PYTHONPATH is pulled from the environment to support installing
 # into one location when some dependencies were installed in another
 # location, #123.
 echo_and_run /usr/bin/env \
-    PYTHONPATH="/home/akash/SimpleQuad/quad_ws/install/lib/python3/dist-packages:/home/akash/SimpleQuad/quad_ws/build/quad_servo_interfacing/lib/python3/dist-packages:$PYTHONPATH" \
-    CATKIN_BINARY_DIR="/home/akash/SimpleQuad/quad_ws/build/quad_servo_interfacing" \
+    PYTHONPATH="/home/mrhello/SimpleQuad/quad_ws/install/lib/python3/dist-packages:/home/mrhello/SimpleQuad/quad_ws/build/quad_servo_interfacing/lib/python3/dist-packages:$PYTHONPATH" \
+    CATKIN_BINARY_DIR="/home/mrhello/SimpleQuad/quad_ws/build/quad_servo_interfacing" \
     "/usr/bin/python3" \
-    "/home/akash/SimpleQuad/quad_ws/src/quad_hardware_interfacing/quad_servo_interfacing/setup.py" \
+    "/home/mrhello/SimpleQuad/quad_ws/src/quad_hardware_interfacing/quad_servo_interfacing/setup.py" \
      \
-    build --build-base "/home/akash/SimpleQuad/quad_ws/build/quad_servo_interfacing" \
+    build --build-base "/home/mrhello/SimpleQuad/quad_ws/build/quad_servo_interfacing" \
     install \
     --root="${DESTDIR-/}" \
-    --install-layout=deb --prefix="/home/akash/SimpleQuad/quad_ws/install" --install-scripts="/home/akash/SimpleQuad/quad_ws/install/bin"
+    --install-layout=deb --prefix="/home/mrhello/SimpleQuad/quad_ws/install" --install-scripts="/home/mrhello/SimpleQuad/quad_ws/install/bin"

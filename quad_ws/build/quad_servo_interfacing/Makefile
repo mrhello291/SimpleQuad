@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/akash/SimpleQuad/quad_ws/src/quad_hardware_interfacing/quad_servo_interfacing
+CMAKE_SOURCE_DIR = /home/mrhello/SimpleQuad/quad_ws/src/quad_hardware_interfacing/quad_servo_interfacing
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/akash/SimpleQuad/quad_ws/build/quad_servo_interfacing
+CMAKE_BINARY_DIR = /home/mrhello/SimpleQuad/quad_ws/build/quad_servo_interfacing
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -137,9 +137,9 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/akash/SimpleQuad/quad_ws/build/quad_servo_interfacing/CMakeFiles /home/akash/SimpleQuad/quad_ws/build/quad_servo_interfacing/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mrhello/SimpleQuad/quad_ws/build/quad_servo_interfacing/CMakeFiles /home/mrhello/SimpleQuad/quad_ws/build/quad_servo_interfacing/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/akash/SimpleQuad/quad_ws/build/quad_servo_interfacing/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mrhello/SimpleQuad/quad_ws/build/quad_servo_interfacing/CMakeFiles 0
 .PHONY : all
 
 # The main clean target

@@ -1,1 +1,1 @@
-/home/akash/SimpleQuad/quad_ws/devel/.private/quad_peripheral_interfacing/share/gennodejs/ros/quad_peripheral_interfacing/msg/ElectricalMeasurements.js
+/home/mrhello/SimpleQuad/quad_ws/devel/.private/quad_peripheral_interfacing/share/gennodejs/ros/quad_peripheral_interfacing/msg/ElectricalMeasurements.js

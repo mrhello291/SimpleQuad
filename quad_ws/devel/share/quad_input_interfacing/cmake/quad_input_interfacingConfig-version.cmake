@@ -1,1 +1,1 @@
-/home/akash/SimpleQuad/quad_ws/devel/.private/quad_input_interfacing/share/quad_input_interfacing/cmake/quad_input_interfacingConfig-version.cmake
+/home/mrhello/SimpleQuad/quad_ws/devel/.private/quad_input_interfacing/share/quad_input_interfacing/cmake/quad_input_interfacingConfig-version.cmake

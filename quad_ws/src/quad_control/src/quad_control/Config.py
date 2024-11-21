@@ -75,10 +75,10 @@ class Configuration:
         )
 
         #Leg lengths
-        self.L1 = 0.0617
+        self.L1 = 0.0347
         self.L2 = 0.1475
         self.L3 = 0.1726
-        self.phi = m.radians(90)
+        self.phi = m.radians(72.122)
         
         ################### INERTIAL ####################
         #Upper leg -> 35gm, Lower Leg -> 82gm(42gm without ankle), first link = 1.8gm, nextlink = 3gm, plate link = 28gm, finallink=7.7gm (So net extras=40gm added to the 250gm module makes 290gm)
@@ -198,19 +198,19 @@ class SimulationConfig:
 # Leg Linkage for the purpose of hardware interfacing
 class Leg_linkage:
     def __init__(self,configuration):
-        self.a = 35.12 #mm
-        self.b = 37.6 #mm
-        self.c = 43 #mm
-        self.d = 35.23  #mm
-        self.e = 67.1 #mm
-        self.f = 130 #mm  #new will be 130.0
-        self.g = 37 #mm
-        self.h = 43 #mm
+        self.a = 60 #mm
+        self.b = 60 #mm
+        self.c = 44 #mm
+        self.d = 30  #mm
+        self.e = 56 #mm
+        self.f = 160 #mm  #new will be 130.0 -> Long bar
+        self.g = 50 #mm -> Long bar lower joint and upper leg lower joint distance
+        self.h = 47 #mm -> Distance between top of upper leg and joint of long bar with plate
         self.upper_leg_length = configuration.L2*1000
         self.lower_leg_length = configuration.L3*1000
         self.lower_leg_bend_angle = m.radians(0) # degrees found on CAD
         self.i = self.upper_leg_length
         self.hip_width = configuration.L1 * 1000
-        self.gamma = m.atan(28.80/20.20)
+        self.gamma = m.atan(0)
         self.EDC = m.acos((self.c**2+self.h**2-self.e**2)/(2*self.c*self.h))
 

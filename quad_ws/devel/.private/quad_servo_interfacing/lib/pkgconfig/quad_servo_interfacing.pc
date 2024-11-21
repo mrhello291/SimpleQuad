@@ -1,4 +1,4 @@
-prefix=/home/akash/SimpleQuad/quad_ws/devel/.private/quad_servo_interfacing
+prefix=/home/mrhello/SimpleQuad/quad_ws/devel/.private/quad_servo_interfacing
 
 Name: quad_servo_interfacing
 Description: Description of quad_servo_interfacing

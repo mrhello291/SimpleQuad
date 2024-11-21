@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/akash/SimpleQuad/quad_ws/src/quad_hardware_interfacing/quad_servo_interfacing
+CMAKE_SOURCE_DIR = /home/mrhello/SimpleQuad/quad_ws/src/quad_hardware_interfacing/quad_servo_interfacing
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/akash/SimpleQuad/quad_ws/build/quad_servo_interfacing
+CMAKE_BINARY_DIR = /home/mrhello/SimpleQuad/quad_ws/build/quad_servo_interfacing
 
 # Utility rule file for _catkin_empty_exported_target.
 
@@ -67,6 +67,6 @@ CMakeFiles/_catkin_empty_exported_target.dir/clean:
 .PHONY : CMakeFiles/_catkin_empty_exported_target.dir/clean
 
 CMakeFiles/_catkin_empty_exported_target.dir/depend:
-	cd /home/akash/SimpleQuad/quad_ws/build/quad_servo_interfacing && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/akash/SimpleQuad/quad_ws/src/quad_hardware_interfacing/quad_servo_interfacing /home/akash/SimpleQuad/quad_ws/src/quad_hardware_interfacing/quad_servo_interfacing /home/akash/SimpleQuad/quad_ws/build/quad_servo_interfacing /home/akash/SimpleQuad/quad_ws/build/quad_servo_interfacing /home/akash/SimpleQuad/quad_ws/build/quad_servo_interfacing/CMakeFiles/_catkin_empty_exported_target.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/mrhello/SimpleQuad/quad_ws/build/quad_servo_interfacing && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/mrhello/SimpleQuad/quad_ws/src/quad_hardware_interfacing/quad_servo_interfacing /home/mrhello/SimpleQuad/quad_ws/src/quad_hardware_interfacing/quad_servo_interfacing /home/mrhello/SimpleQuad/quad_ws/build/quad_servo_interfacing /home/mrhello/SimpleQuad/quad_ws/build/quad_servo_interfacing /home/mrhello/SimpleQuad/quad_ws/build/quad_servo_interfacing/CMakeFiles/_catkin_empty_exported_target.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/_catkin_empty_exported_target.dir/depend
 

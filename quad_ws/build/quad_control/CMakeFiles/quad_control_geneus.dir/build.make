@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/akash/SimpleQuad/quad_ws/src/quad_control
+CMAKE_SOURCE_DIR = /home/mrhello/SimpleQuad/quad_ws/src/quad_control
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/akash/SimpleQuad/quad_ws/build/quad_control
+CMAKE_BINARY_DIR = /home/mrhello/SimpleQuad/quad_ws/build/quad_control
 
 # Utility rule file for quad_control_geneus.
 
@@ -67,6 +67,6 @@ CMakeFiles/quad_control_geneus.dir/clean:
 .PHONY : CMakeFiles/quad_control_geneus.dir/clean
 
 CMakeFiles/quad_control_geneus.dir/depend:
-	cd /home/akash/SimpleQuad/quad_ws/build/quad_control && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/akash/SimpleQuad/quad_ws/src/quad_control /home/akash/SimpleQuad/quad_ws/src/quad_control /home/akash/SimpleQuad/quad_ws/build/quad_control /home/akash/SimpleQuad/quad_ws/build/quad_control /home/akash/SimpleQuad/quad_ws/build/quad_control/CMakeFiles/quad_control_geneus.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/mrhello/SimpleQuad/quad_ws/build/quad_control && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/mrhello/SimpleQuad/quad_ws/src/quad_control /home/mrhello/SimpleQuad/quad_ws/src/quad_control /home/mrhello/SimpleQuad/quad_ws/build/quad_control /home/mrhello/SimpleQuad/quad_ws/build/quad_control /home/mrhello/SimpleQuad/quad_ws/build/quad_control/CMakeFiles/quad_control_geneus.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/quad_control_geneus.dir/depend
 

@@ -1,1 +1,1 @@
-/home/akash/SimpleQuad/quad_ws/devel/.private/quad_cam_interfacing/lib/pkgconfig/quad_cam_interfacing.pc
+/home/mrhello/SimpleQuad/quad_ws/devel/.private/quad_cam_interfacing/lib/pkgconfig/quad_cam_interfacing.pc

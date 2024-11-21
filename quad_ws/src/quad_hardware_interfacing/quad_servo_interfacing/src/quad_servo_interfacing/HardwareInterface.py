@@ -1,17 +1,14 @@
 #!/usr/bin/env python3
-from adafruit_servokit import ServoKit
 import numpy as np
 import math as m
 import rospy
+from std_msgs.msg import Float64MultiArray
 
 class HardwareInterface():
     def __init__(self,link):
-        self.pwm_max = 2400
-        self.pwm_min = 370
         self.link = link
         self.servo_angles = np.zeros((3,4))
-        self.kit = ServoKit(channels=16) #Defininng a new set of servos uising the Adafruit ServoKit LIbrary
-        
+
         """ SERVO INDICES, CALIBRATION MULTIPLIERS AND OFFSETS
             #   ROW:    which joint of leg to control 0:hip, 1: upper leg, 2: lower leg
             #   COLUMN: which leg to control. 0: front-right, 1: front-left, 2: back-right, 3: back-left.
@@ -27,15 +24,15 @@ class HardwareInterface():
                               [12,8,4,0]])
 
         """ 'servo_multipliers' and 'complementary_angle' both work to flip some angles, x, to (180-x) so that movement on each leg is consistent despite
-            physical motor oritentation changes """
+            physical motor oritentation changes. For hips I have defined + as going up for hips. """
         self.servo_multipliers = np.array(
                             [[-1, 1, 1, -1], 
                             [1, -1, 1, -1], 
-                            [1, -1, 1, -1]])
+                            [-1, 1, -1, 1]])
         self.complementary_angle = np.array(
                             [[180, 0, 0, 180], 
                             [0, 180, 0, 180], 
-                            [0, 180, 0, 180]])
+                            [180, 0, 180, 0]])
 
         """ 'physical_calibration_offsets' are the angle required for the servo to be at their 'zero'locations. These zero locations
             are NOT the angles deifned in the IK, but rather locations that allow practical usage of the servo's 180 degree range of motion. 
@@ -44,18 +41,17 @@ class HardwareInterface():
             - Offsets for UPPER leg servos map allign the servo so that it is horizontal toward the back of the robot at an input of zero degrees, direct from the IK. 
             - Offsets for LOWER leg servos map allign the servo so that it is vertically down at zero degrees. Note that IK requires a transformation of
                 angle_sent_to_servo = (180-angle_from_IK) + 90 degrees to map to this physcial servo location.  """
+        # self.physical_calibration_offsets = np.array(
+        #             [[75, 130, 113, 73],
+        #             [29, 13, 33, 15],
+        #             [26, 12, 30, 4]])
         self.physical_calibration_offsets = np.array(
-                    [[75, 130, 113, 73],
-                    [29, 13, 33, 15],
-                    [26, 12, 30, 4]])
-        #applying calibration values to all servos
-        self.create()
+                    [[75, 70, 100, 75],
+                    [10, 0, 5, 10],
+                    [0, 0, 0, 0]])
 
-    def create(self):
-        for i in range(16):
-            self.kit.servo[i].actuation_range = 180
-            self.kit.servo[i].set_pulse_width_range(self.pwm_min, self.pwm_max)
-
+        self.angle_publisher = rospy.Publisher('/servo_angles', Float64MultiArray, queue_size=10)
+    
     def set_actuator_postions(self, joint_angles):
         """Converts all angles found via inverse kinematics to the angles needed at the servo by applying multipliers
         and offsets for complimentary angles.
@@ -70,14 +66,26 @@ class HardwareInterface():
         
         #Convert to servo angles
         self.joint_angles_to_servo_angles(possible_joint_angles)
+        
 
         # print('Final angles for actuation: ',self.servo_angles)    
-        for leg_index in range(4):
+        """for leg_index in range(4):
             for axis_index in range(3):
                 try:
                     self.kit.servo[self.pins[axis_index,leg_index]].angle = self.servo_angles[axis_index,leg_index]
                 except:
                     rospy.logwarn("Warning - I2C IO error")
+                    """
+        # Publish the updated servo angles
+        self.publish_servo_angles()
+
+    def publish_servo_angles(self):
+        """Publishes the servo angles as a 2D array via ROS."""
+        msg = Float64MultiArray()
+        msg.data = self.servo_angles.flatten().tolist()
+        self.angle_publisher.publish(msg)
+
+
 ## HERE ##
 
     ##  This method is used only in the calibrate servos file will make something similar to command individual actuators. 
@@ -91,10 +99,14 @@ class HardwareInterface():
         servo_list : 3x4 numpy array of 1's and zeros. Row = Actuator; Column = leg.
                     If a Given actuator is 0 is 1 it should be deactivated, if it is 0 is should be left on. 
         """
+        servo = np.zeros((3, 4))
         for leg_index in range(4):
             for axis_index in range(3):
                 if servo_list[axis_index,leg_index] == 1:
-                    self.kit.servo[self.pins[axis_index,leg_index]].angle = None
+                    servo[axis_index,leg_index] = None
+        msg = Float64MultiArray()
+        msg.data = servo.flatten().tolist()
+        self.angle_publisher.publish(msg)
 
 
     def joint_angles_to_servo_angles(self,joint_angles):
@@ -129,7 +141,6 @@ class HardwareInterface():
 
         #Accounting for difference in configuration of servos (some are mounted backwards)
         self.servo_angles  = np.round(np.multiply(self.servo_angles,self.servo_multipliers)+ self.complementary_angle,1)
-
 
 
 

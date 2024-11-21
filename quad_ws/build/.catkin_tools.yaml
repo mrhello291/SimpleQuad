@@ -1,6 +1,6 @@
-devel_space: /home/akash/SimpleQuad/quad_ws/devel
+devel_space: /home/mrhello/SimpleQuad/quad_ws/devel
 install: false
-install_space: /home/akash/SimpleQuad/quad_ws/install
+install_space: /home/mrhello/SimpleQuad/quad_ws/install
 profile: default
-source_space: /home/akash/SimpleQuad/quad_ws/src
-workspace: /home/akash/SimpleQuad/quad_ws
+source_space: /home/mrhello/SimpleQuad/quad_ws/src
+workspace: /home/mrhello/SimpleQuad/quad_ws

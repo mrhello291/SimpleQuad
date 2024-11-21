@@ -1,1 +1,1 @@
-/home/akash/SimpleQuad/quad_ws/devel/.private/catkin_tools_prebuild/setup.bash
+/home/mrhello/SimpleQuad/quad_ws/devel/.private/catkin_tools_prebuild/setup.bash

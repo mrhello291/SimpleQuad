@@ -67,14 +67,14 @@ set(quad_control_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(quad_control_SOURCE_PREFIX /home/akash/SimpleQuad/quad_ws/src/quad_control)
-  set(quad_control_DEVEL_PREFIX /home/akash/SimpleQuad/quad_ws/devel/.private/quad_control)
+  set(quad_control_SOURCE_PREFIX /home/mrhello/SimpleQuad/quad_ws/src/quad_control)
+  set(quad_control_DEVEL_PREFIX /home/mrhello/SimpleQuad/quad_ws/devel/.private/quad_control)
   set(quad_control_INSTALL_PREFIX "")
   set(quad_control_PREFIX ${quad_control_DEVEL_PREFIX})
 else()
   set(quad_control_SOURCE_PREFIX "")
   set(quad_control_DEVEL_PREFIX "")
-  set(quad_control_INSTALL_PREFIX /home/akash/SimpleQuad/quad_ws/install)
+  set(quad_control_INSTALL_PREFIX /home/mrhello/SimpleQuad/quad_ws/install)
   set(quad_control_PREFIX ${quad_control_INSTALL_PREFIX})
 endif()
 
@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(quad_control_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "/home/akash/SimpleQuad/quad_ws/devel/.private/quad_control/include " STREQUAL " ")
+if(NOT "/home/mrhello/SimpleQuad/quad_ws/devel/.private/quad_control/include " STREQUAL " ")
   set(quad_control_INCLUDE_DIRS "")
-  set(_include_dirs "/home/akash/SimpleQuad/quad_ws/devel/.private/quad_control/include")
+  set(_include_dirs "/home/mrhello/SimpleQuad/quad_ws/devel/.private/quad_control/include")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT " " STREQUAL " ")
@@ -110,7 +110,7 @@ if(NOT "/home/akash/SimpleQuad/quad_ws/devel/.private/quad_control/include " STR
         message(FATAL_ERROR "Project 'quad_control' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'quad_control' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/akash/SimpleQuad/quad_ws/src/quad_control/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'quad_control' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/mrhello/SimpleQuad/quad_ws/src/quad_control/${idir}'.  ${_report}")
     endif()
     _list_append_unique(quad_control_INCLUDE_DIRS ${include})
   endforeach()
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/akash/SimpleQuad/quad_ws/devel/.private/quad_control/lib;/home/akash/SimpleQuad/quad_ws/devel/lib;/home/akash/DingoQuadruped/dingo_ws/devel/lib;/opt/ros/noetic/lib)
+    foreach(path /home/mrhello/SimpleQuad/quad_ws/devel/.private/quad_control/lib;/home/mrhello/test_ws/devel/lib;/home/mrhello/SimpleQuad/quad_ws/devel/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

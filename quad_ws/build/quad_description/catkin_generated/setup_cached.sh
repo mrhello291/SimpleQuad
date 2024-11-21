@@ -7,7 +7,7 @@
 # new environment variables
 
 # modified environment variables
-export CMAKE_PREFIX_PATH="/home/akash/SimpleQuad/quad_ws/devel/.private/quad_description:$CMAKE_PREFIX_PATH"
-export PWD='/home/akash/SimpleQuad/quad_ws/build/quad_description'
-export ROSLISP_PACKAGE_DIRECTORIES="/home/akash/SimpleQuad/quad_ws/devel/.private/quad_description/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
-export ROS_PACKAGE_PATH="/home/akash/SimpleQuad/quad_ws/src/quad_description:$ROS_PACKAGE_PATH"
+export CMAKE_PREFIX_PATH="/home/mrhello/SimpleQuad/quad_ws/devel/.private/quad_description:$CMAKE_PREFIX_PATH"
+export PWD='/home/mrhello/SimpleQuad/quad_ws/build/quad_description'
+export ROSLISP_PACKAGE_DIRECTORIES="/home/mrhello/SimpleQuad/quad_ws/devel/.private/quad_description/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
+export ROS_PACKAGE_PATH="/home/mrhello/SimpleQuad/quad_ws/src/quad_description:$ROS_PACKAGE_PATH"

@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/akash/SimpleQuad/quad_ws/src/quad
+CMAKE_SOURCE_DIR = /home/mrhello/SimpleQuad/quad_ws/src/quad
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/akash/SimpleQuad/quad_ws/build/quad
+CMAKE_BINARY_DIR = /home/mrhello/SimpleQuad/quad_ws/build/quad
 
 # Utility rule file for clean_test_results.
 
@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/akash/SimpleQuad/quad_ws/build/quad
 include CMakeFiles/clean_test_results.dir/progress.make
 
 CMakeFiles/clean_test_results:
-	/usr/bin/python3 /opt/ros/noetic/share/catkin/cmake/test/remove_test_results.py /home/akash/SimpleQuad/quad_ws/build/quad/test_results
+	/usr/bin/python3 /opt/ros/noetic/share/catkin/cmake/test/remove_test_results.py /home/mrhello/SimpleQuad/quad_ws/build/quad/test_results
 
 clean_test_results: CMakeFiles/clean_test_results
 clean_test_results: CMakeFiles/clean_test_results.dir/build.make
@@ -71,6 +71,6 @@ CMakeFiles/clean_test_results.dir/clean:
 .PHONY : CMakeFiles/clean_test_results.dir/clean
 
 CMakeFiles/clean_test_results.dir/depend:
-	cd /home/akash/SimpleQuad/quad_ws/build/quad && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/akash/SimpleQuad/quad_ws/src/quad /home/akash/SimpleQuad/quad_ws/src/quad /home/akash/SimpleQuad/quad_ws/build/quad /home/akash/SimpleQuad/quad_ws/build/quad /home/akash/SimpleQuad/quad_ws/build/quad/CMakeFiles/clean_test_results.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/mrhello/SimpleQuad/quad_ws/build/quad && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/mrhello/SimpleQuad/quad_ws/src/quad /home/mrhello/SimpleQuad/quad_ws/src/quad /home/mrhello/SimpleQuad/quad_ws/build/quad /home/mrhello/SimpleQuad/quad_ws/build/quad /home/mrhello/SimpleQuad/quad_ws/build/quad/CMakeFiles/clean_test_results.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/clean_test_results.dir/depend
 
