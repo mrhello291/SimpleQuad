@@ -3,6 +3,6 @@ prefix=/home/mrhello/SimpleQuad/quad_ws/devel/.private/quad_peripheral_interfaci
 Name: quad_peripheral_interfacing
 Description: Description of quad_peripheral_interfacing
 Version: 0.0.0
-Cflags: -I/home/mrhello/SimpleQuad/quad_ws/devel/.private/quad_peripheral_interfacing/include
+Cflags: 
 Libs: -L${prefix}/lib 
 Requires: rospy message_runtime

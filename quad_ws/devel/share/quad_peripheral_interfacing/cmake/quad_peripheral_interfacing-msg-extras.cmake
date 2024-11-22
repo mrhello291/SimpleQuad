@@ -1,1 +1,0 @@
-/home/mrhello/SimpleQuad/quad_ws/devel/.private/quad_peripheral_interfacing/share/quad_peripheral_interfacing/cmake/quad_peripheral_interfacing-msg-extras.cmake

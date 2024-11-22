@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/mrhello/SimpleQuad/quad_ws/build/quad_control
 include CMakeFiles/_quad_control_generate_messages_check_deps_TaskSpace.dir/progress.make
 
 CMakeFiles/_quad_control_generate_messages_check_deps_TaskSpace:
-	catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py quad_control /home/mrhello/SimpleQuad/quad_ws/src/quad_control/msg/TaskSpace.msg geometry_msgs/Point:std_msgs/Header
+	catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py quad_control /home/mrhello/SimpleQuad/quad_ws/src/quad_control/msg/TaskSpace.msg std_msgs/Header:geometry_msgs/Point
 
 _quad_control_generate_messages_check_deps_TaskSpace: CMakeFiles/_quad_control_generate_messages_check_deps_TaskSpace
 _quad_control_generate_messages_check_deps_TaskSpace: CMakeFiles/_quad_control_generate_messages_check_deps_TaskSpace.dir/build.make

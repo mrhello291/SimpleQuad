@@ -133,47 +133,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/quad_peripheral_interfacing/msg" TYPE FILE FILES "/home/mrhello/SimpleQuad/quad_ws/src/quad_hardware_interfacing/quad_peripheral_interfacing/msg/ElectricalMeasurements.msg")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/quad_peripheral_interfacing/cmake" TYPE FILE FILES "/home/mrhello/SimpleQuad/quad_ws/build/quad_peripheral_interfacing/catkin_generated/installspace/quad_peripheral_interfacing-msg-paths.cmake")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/mrhello/SimpleQuad/quad_ws/devel/.private/quad_peripheral_interfacing/include/quad_peripheral_interfacing")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/mrhello/SimpleQuad/quad_ws/devel/.private/quad_peripheral_interfacing/share/roseus/ros/quad_peripheral_interfacing")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/mrhello/SimpleQuad/quad_ws/devel/.private/quad_peripheral_interfacing/share/common-lisp/ros/quad_peripheral_interfacing")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/mrhello/SimpleQuad/quad_ws/devel/.private/quad_peripheral_interfacing/share/gennodejs/ros/quad_peripheral_interfacing")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  execute_process(COMMAND "/usr/bin/python3" -m compileall "/home/mrhello/SimpleQuad/quad_ws/devel/.private/quad_peripheral_interfacing/lib/python3/dist-packages/quad_peripheral_interfacing")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages" TYPE DIRECTORY FILES "/home/mrhello/SimpleQuad/quad_ws/devel/.private/quad_peripheral_interfacing/lib/python3/dist-packages/quad_peripheral_interfacing" REGEX "/\\_\\_init\\_\\_\\.py$" EXCLUDE REGEX "/\\_\\_init\\_\\_\\.pyc$" EXCLUDE)
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages" TYPE DIRECTORY FILES "/home/mrhello/SimpleQuad/quad_ws/devel/.private/quad_peripheral_interfacing/lib/python3/dist-packages/quad_peripheral_interfacing" FILES_MATCHING REGEX "/home/mrhello/SimpleQuad/quad_ws/devel/\\.private/quad_peripheral_interfacing/lib/python3/dist-packages/quad_peripheral_interfacing/.+/__init__.pyc?$")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/mrhello/SimpleQuad/quad_ws/build/quad_peripheral_interfacing/catkin_generated/installspace/quad_peripheral_interfacing.pc")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/quad_peripheral_interfacing/cmake" TYPE FILE FILES "/home/mrhello/SimpleQuad/quad_ws/build/quad_peripheral_interfacing/catkin_generated/installspace/quad_peripheral_interfacing-msg-extras.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -185,10 +145,6 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/quad_peripheral_interfacing" TYPE FILE FILES "/home/mrhello/SimpleQuad/quad_ws/src/quad_hardware_interfacing/quad_peripheral_interfacing/package.xml")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/quad_peripheral_interfacing" TYPE PROGRAM FILES "/home/mrhello/SimpleQuad/quad_ws/build/quad_peripheral_interfacing/catkin_generated/installspace/battery_voltage_checking.py")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)

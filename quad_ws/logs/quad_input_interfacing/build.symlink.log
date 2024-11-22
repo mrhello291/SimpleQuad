@@ -4,22 +4,3 @@ Symlinking /home/mrhello/SimpleQuad/quad_ws/devel/lib/quad_input_interfacing/cma
 Symlinking /home/mrhello/SimpleQuad/quad_ws/devel/lib/quad_input_interfacing/Keyboard.py
 Symlinking /home/mrhello/SimpleQuad/quad_ws/devel/share/quad_input_interfacing/cmake/quad_input_interfacingConfig-version.cmake
 Symlinking /home/mrhello/SimpleQuad/quad_ws/devel/share/quad_input_interfacing/cmake/quad_input_interfacingConfig.cmake
-Cleaning: (/home/akash/SimpleQuad/quad_ws/devel/.private/quad_input_interfacing/cmake.lock, /home/akash/SimpleQuad/quad_ws/devel/./cmake.lock)
-Cleaning: (/home/akash/SimpleQuad/quad_ws/devel/.private/quad_input_interfacing/lib/python3/dist-packages/quad_input_interfacing/__init__.py, /home/akash/SimpleQuad/quad_ws/devel/lib/python3/dist-packages/quad_input_interfacing/__init__.py)
-Cleaning: (/home/akash/SimpleQuad/quad_ws/devel/.private/quad_input_interfacing/lib/pkgconfig/quad_input_interfacing.pc, /home/akash/SimpleQuad/quad_ws/devel/lib/pkgconfig/quad_input_interfacing.pc)
-Cleaning: (/home/akash/SimpleQuad/quad_ws/devel/.private/quad_input_interfacing/lib/quad_input_interfacing/cmake.lock, /home/akash/SimpleQuad/quad_ws/devel/lib/quad_input_interfacing/cmake.lock)
-Cleaning: (/home/akash/SimpleQuad/quad_ws/devel/.private/quad_input_interfacing/lib/quad_input_interfacing/Keyboard.py, /home/akash/SimpleQuad/quad_ws/devel/lib/quad_input_interfacing/Keyboard.py)
-Cleaning: (/home/akash/SimpleQuad/quad_ws/devel/.private/quad_input_interfacing/share/quad_input_interfacing/cmake/quad_input_interfacingConfig-version.cmake, /home/akash/SimpleQuad/quad_ws/devel/share/quad_input_interfacing/cmake/quad_input_interfacingConfig-version.cmake)
-Cleaning: (/home/akash/SimpleQuad/quad_ws/devel/.private/quad_input_interfacing/share/quad_input_interfacing/cmake/quad_input_interfacingConfig.cmake, /home/akash/SimpleQuad/quad_ws/devel/share/quad_input_interfacing/cmake/quad_input_interfacingConfig.cmake)
-Unlinking: /home/akash/SimpleQuad/quad_ws/devel/lib/python3/dist-packages/quad_input_interfacing/__init__.py
-Already unlinked: {}
-Unlinking: /home/akash/SimpleQuad/quad_ws/devel/lib/pkgconfig/quad_input_interfacing.pc
-Already unlinked: {}
-Unlinking: /home/akash/SimpleQuad/quad_ws/devel/lib/quad_input_interfacing/cmake.lock
-Already unlinked: {}
-Unlinking: /home/akash/SimpleQuad/quad_ws/devel/lib/quad_input_interfacing/Keyboard.py
-Already unlinked: {}
-Unlinking: /home/akash/SimpleQuad/quad_ws/devel/share/quad_input_interfacing/cmake/quad_input_interfacingConfig-version.cmake
-Already unlinked: {}
-Unlinking: /home/akash/SimpleQuad/quad_ws/devel/share/quad_input_interfacing/cmake/quad_input_interfacingConfig.cmake
-Already unlinked: {}

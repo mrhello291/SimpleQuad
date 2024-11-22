@@ -19,7 +19,7 @@ add_custom_target(quad_control_generate_messages ALL)
 
 get_filename_component(_filename "/home/mrhello/SimpleQuad/quad_ws/src/quad_control/msg/TaskSpace.msg" NAME_WE)
 add_custom_target(_quad_control_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "quad_control" "/home/mrhello/SimpleQuad/quad_ws/src/quad_control/msg/TaskSpace.msg" "geometry_msgs/Point:std_msgs/Header"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "quad_control" "/home/mrhello/SimpleQuad/quad_ws/src/quad_control/msg/TaskSpace.msg" "std_msgs/Header:geometry_msgs/Point"
 )
 
 get_filename_component(_filename "/home/mrhello/SimpleQuad/quad_ws/src/quad_control/msg/JointSpace.msg" NAME_WE)
@@ -41,7 +41,7 @@ add_custom_target(_quad_control_generate_messages_check_deps_${_filename}
 _generate_msg_cpp(quad_control
   "/home/mrhello/SimpleQuad/quad_ws/src/quad_control/msg/TaskSpace.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/quad_control
 )
 _generate_msg_cpp(quad_control
@@ -90,7 +90,7 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS quad_control_generate_messages_cpp)
 _generate_msg_eus(quad_control
   "/home/mrhello/SimpleQuad/quad_ws/src/quad_control/msg/TaskSpace.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/quad_control
 )
 _generate_msg_eus(quad_control
@@ -139,7 +139,7 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS quad_control_generate_messages_eus)
 _generate_msg_lisp(quad_control
   "/home/mrhello/SimpleQuad/quad_ws/src/quad_control/msg/TaskSpace.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/quad_control
 )
 _generate_msg_lisp(quad_control
@@ -188,7 +188,7 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS quad_control_generate_messages_lisp
 _generate_msg_nodejs(quad_control
   "/home/mrhello/SimpleQuad/quad_ws/src/quad_control/msg/TaskSpace.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/quad_control
 )
 _generate_msg_nodejs(quad_control
@@ -237,7 +237,7 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS quad_control_generate_messages_node
 _generate_msg_py(quad_control
   "/home/mrhello/SimpleQuad/quad_ws/src/quad_control/msg/TaskSpace.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/quad_control
 )
 _generate_msg_py(quad_control

@@ -42,7 +42,7 @@ class IMU:
             yaw, pitch, roll = r.as_euler('zyx', degrees=True)  # Extract in degrees
             yaw = m.radians(360-yaw) 
             pitch = m.radians(-pitch)
-            roll = m.radians(roll) # fixed offset to account for the IMU being off by 30 degrees
+            roll = m.radians(roll - 60) # fixed offset to account for the IMU being off by 60 degrees
             self.last_euler = [yaw,pitch,roll]
         except:
             self.last_euler = np.array([ 0, 0, 0])

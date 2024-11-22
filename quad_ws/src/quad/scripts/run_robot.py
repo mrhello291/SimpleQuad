@@ -37,7 +37,7 @@ def signal_handler(sig, frame):
 def main(use_imu=False):
     """Main program
     """
-    rospy.init_node("quad") 
+    rospy.init_node("dingo") 
     message_rate = 50
     rate = rospy.Rate(message_rate)
 
@@ -116,7 +116,7 @@ def main(use_imu=False):
             #last_loop = time.time()
             time.start = rospy.Time.now()
             # Parse the udp joystick commands and then update the robot controller's parameters
-            command = input_interface.get_command(state,message_rate)
+            command = input_interface.get_command(state,essage_rate)
             if command.joystick_control_event == 1:
                 print("Deactivating Robot")
                 break

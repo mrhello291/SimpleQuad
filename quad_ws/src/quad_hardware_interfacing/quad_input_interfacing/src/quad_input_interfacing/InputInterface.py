@@ -29,16 +29,16 @@ class InputInterface:
         self.developing_command = Command()
         ####### Handle discrete commands ########
         # Check if requesting a state transition to trotting, or from trotting to resting
-        gait_toggle = msg.buttons[5] #R1
+        gait_toggle = msg.buttons[7] #R1
         if self.trot_event != 1:
             self.trot_event = (gait_toggle == 1 and self.previous_gait_toggle == 0)
 
         # Check if requesting a state transition to hopping, from trotting or resting
-        hop_toggle = msg.buttons[0] #x
+        hop_toggle = msg.buttons[0] #a
         if self.hop_event != 1:
             self.hop_event = (hop_toggle == 1 and self.previous_hop_toggle == 0)            
         
-        joystick_toggle = msg.buttons[4] #L1
+        joystick_toggle = msg.buttons[6] #L1
         if self.joystick_control_event != 1:
             self.joystick_control_event = (joystick_toggle == 1 and self.previous_joystick_toggle == 0)
 
@@ -51,9 +51,9 @@ class InputInterface:
         x_vel = (msg.axes[1] ) * self.config.max_x_velocity #ly
         y_vel = msg.axes[0] * self.config.max_y_velocity #lx
         self.developing_command.horizontal_velocity =  np.round(np.array([x_vel, y_vel]),self.rounding_dp)
-        self.developing_command.yaw_rate = np.round(msg.axes[3],self.rounding_dp) * self.config.max_yaw_rate #rx
+        self.developing_command.yaw_rate = np.round(msg.axes[2],self.rounding_dp) * self.config.max_yaw_rate #rx
 
-        self.developing_command.pitch = np.round(msg.axes[4],self.rounding_dp) * self.config.max_pitch #ry
+        self.developing_command.pitch = np.round(msg.axes[3],self.rounding_dp) * self.config.max_pitch #ry
         self.developing_command.height_movement = np.round(msg.axes[7],self.rounding_dp) #dpady
         self.developing_command.roll_movement = -np.round(msg.axes[6],self.rounding_dp) #dpadx
 

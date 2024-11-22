@@ -60,8 +60,8 @@ CMakeFiles/quad_control_generate_messages_nodejs: /home/mrhello/SimpleQuad/quad_
 
 /home/mrhello/SimpleQuad/quad_ws/devel/.private/quad_control/share/gennodejs/ros/quad_control/msg/TaskSpace.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
 /home/mrhello/SimpleQuad/quad_ws/devel/.private/quad_control/share/gennodejs/ros/quad_control/msg/TaskSpace.js: /home/mrhello/SimpleQuad/quad_ws/src/quad_control/msg/TaskSpace.msg
-/home/mrhello/SimpleQuad/quad_ws/devel/.private/quad_control/share/gennodejs/ros/quad_control/msg/TaskSpace.js: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
 /home/mrhello/SimpleQuad/quad_ws/devel/.private/quad_control/share/gennodejs/ros/quad_control/msg/TaskSpace.js: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/mrhello/SimpleQuad/quad_ws/devel/.private/quad_control/share/gennodejs/ros/quad_control/msg/TaskSpace.js: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/mrhello/SimpleQuad/quad_ws/build/quad_control/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Javascript code from quad_control/TaskSpace.msg"
 	catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/mrhello/SimpleQuad/quad_ws/src/quad_control/msg/TaskSpace.msg -Iquad_control:/home/mrhello/SimpleQuad/quad_ws/src/quad_control/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -p quad_control -o /home/mrhello/SimpleQuad/quad_ws/devel/.private/quad_control/share/gennodejs/ros/quad_control/msg
 

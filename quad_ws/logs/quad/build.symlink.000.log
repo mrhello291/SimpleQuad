@@ -1,7 +1,7 @@
-Symlinking /home/akash/SimpleQuad/quad_ws/devel/lib/quad/cmake.lock
-Symlinking /home/akash/SimpleQuad/quad_ws/devel/lib/quad/quad_driver.py
-Symlinking /home/akash/SimpleQuad/quad_ws/devel/lib/quad/run_robot.py
-Symlinking /home/akash/SimpleQuad/quad_ws/devel/lib/python3/dist-packages/quad/__init__.py
-Symlinking /home/akash/SimpleQuad/quad_ws/devel/lib/pkgconfig/quad.pc
-Symlinking /home/akash/SimpleQuad/quad_ws/devel/share/quad/cmake/quadConfig.cmake
-Symlinking /home/akash/SimpleQuad/quad_ws/devel/share/quad/cmake/quadConfig-version.cmake
+Symlinking /home/mrhello/SimpleQuad/quad_ws/devel/lib/pkgconfig/quad.pc
+Symlinking /home/mrhello/SimpleQuad/quad_ws/devel/lib/quad/cmake.lock
+Symlinking /home/mrhello/SimpleQuad/quad_ws/devel/lib/quad/quad_driver.py
+Symlinking /home/mrhello/SimpleQuad/quad_ws/devel/lib/quad/run_robot.py
+Symlinking /home/mrhello/SimpleQuad/quad_ws/devel/lib/python3/dist-packages/quad/__init__.py
+Symlinking /home/mrhello/SimpleQuad/quad_ws/devel/share/quad/cmake/quadConfig-version.cmake
+Symlinking /home/mrhello/SimpleQuad/quad_ws/devel/share/quad/cmake/quadConfig.cmake

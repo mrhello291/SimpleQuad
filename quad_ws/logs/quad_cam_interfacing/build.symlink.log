@@ -1,13 +1,3 @@
 Symlinking /home/mrhello/SimpleQuad/quad_ws/devel/lib/pkgconfig/quad_cam_interfacing.pc
 Symlinking /home/mrhello/SimpleQuad/quad_ws/devel/share/quad_cam_interfacing/cmake/quad_cam_interfacingConfig.cmake
 Symlinking /home/mrhello/SimpleQuad/quad_ws/devel/share/quad_cam_interfacing/cmake/quad_cam_interfacingConfig-version.cmake
-Cleaning: (/home/akash/SimpleQuad/quad_ws/devel/.private/quad_cam_interfacing/cmake.lock, /home/akash/SimpleQuad/quad_ws/devel/./cmake.lock)
-Cleaning: (/home/akash/SimpleQuad/quad_ws/devel/.private/quad_cam_interfacing/lib/pkgconfig/quad_cam_interfacing.pc, /home/akash/SimpleQuad/quad_ws/devel/lib/pkgconfig/quad_cam_interfacing.pc)
-Cleaning: (/home/akash/SimpleQuad/quad_ws/devel/.private/quad_cam_interfacing/share/quad_cam_interfacing/cmake/quad_cam_interfacingConfig-version.cmake, /home/akash/SimpleQuad/quad_ws/devel/share/quad_cam_interfacing/cmake/quad_cam_interfacingConfig-version.cmake)
-Cleaning: (/home/akash/SimpleQuad/quad_ws/devel/.private/quad_cam_interfacing/share/quad_cam_interfacing/cmake/quad_cam_interfacingConfig.cmake, /home/akash/SimpleQuad/quad_ws/devel/share/quad_cam_interfacing/cmake/quad_cam_interfacingConfig.cmake)
-Unlinking: /home/akash/SimpleQuad/quad_ws/devel/lib/pkgconfig/quad_cam_interfacing.pc
-Already unlinked: {}
-Unlinking: /home/akash/SimpleQuad/quad_ws/devel/share/quad_cam_interfacing/cmake/quad_cam_interfacingConfig-version.cmake
-Already unlinked: {}
-Unlinking: /home/akash/SimpleQuad/quad_ws/devel/share/quad_cam_interfacing/cmake/quad_cam_interfacingConfig.cmake
-Already unlinked: {}

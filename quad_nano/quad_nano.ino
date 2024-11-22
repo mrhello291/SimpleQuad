@@ -1,7 +1,7 @@
 #include <Wire.h>
 #include <Adafruit_PWMServoDriver.h>
 #include <ros.h>
-#include <std_msgs/Float32MultiArray.h>
+#include <std_msgs/Float64MultiArray.h>
 
 Adafruit_PWMServoDriver myServo = Adafruit_PWMServoDriver();
 ros::NodeHandle nh;
@@ -15,8 +15,9 @@ int counter2 = 0;
 int state1 = 1;
 int state2 = 1;
 */
-float servo_angles[12];
+float servo_angles[12] = {105, 70, 100, 105, 10, 180, 5, 170, 90, 90, 90, 90};
 uint8_t servoPins[12] = {14, 10, 6, 2, 13, 9, 5, 1, 12, 8, 4, 0};
+float def[12] = {105, 70, 100, 105, 10, 180, 5, 170, 90, 90, 90, 90};
 
 uint16_t pwmFromAngle(float angle){
   angle = constrain(angle, 0, 180);
@@ -33,29 +34,39 @@ void setAngle(uint8_t pin, float angle){
 void servoAnglesCallback(const std_msgs::Float64MultiArray& msg) {
   for (int i = 0; i < 12; i++) {
     servo_angles[i] = msg.data[i];
-    setAngle(servoPins[i], servo_angles[i]);
+    if (servo_angles[i]){
+    	setAngle(servoPins[i], servo_angles[i]);
+	Serial.println("Angle Set to");
+	Serial.println(servo_angles[i]);
+    }
+    else {
+    	setAngle(servoPins[i], def[i]);
+	Serial.println("Default Angle Set to");
+	Serial.println(def[i]);
+    }
   }
 }
 
 ros::Subscriber<std_msgs::Float64MultiArray> sub("servo_angles", servoAnglesCallback);
 
 void setup() {
-  Serial.begin(115200);
+  Serial.begin(57600);
   myServo.begin();
   myServo.setPWMFreq(60);
+  /*
   // Initialize ROS node
   nh.initNode();
 
   // Subscribe to the topic
   nh.subscribe(sub);
   Serial.println("Arduino ready to receive servo angles...");
+	*/
 }
 
 void loop() {
-  nh.spinOnce();  // Process incoming messages
+  /*nh.spinOnce();  // Process incoming messages
   delay(10);      // Small delay for stability
-}
-
+*/
 
 /*
 
@@ -94,7 +105,6 @@ void loop() {
 
   delay(1000);
 */
-/*
   // BL
   setAngle(1, 170);
   setAngle(0, 90);
@@ -113,5 +123,5 @@ void loop() {
   // FR
   setAngle(13, 10);
   setAngle(12, 90);
-  setAngle(14, 105);
-*/
+  setAngle(14, 75);
+}

@@ -1,1 +1,0 @@
-/home/mrhello/SimpleQuad/quad_ws/devel/.private/quad_peripheral_interfacing/share/common-lisp/ros/quad_peripheral_interfacing/msg/quad_peripheral_interfacing-msg.asd

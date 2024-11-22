@@ -2,12 +2,16 @@
 import numpy as np
 import math as m
 import rospy
+from adafruit_servokit import ServoKit
 from std_msgs.msg import Float64MultiArray
 
 class HardwareInterface():
     def __init__(self,link):
+        self.pwm_max = 1000
+        self.pwm_min = 2000
         self.link = link
         self.servo_angles = np.zeros((3,4))
+        self.kit = ServoKit(channels=16, frequency=60) #Defininng a new set of servos uising the Adafruit ServoKit LIbrary
 
         """ SERVO INDICES, CALIBRATION MULTIPLIERS AND OFFSETS
             #   ROW:    which joint of leg to control 0:hip, 1: upper leg, 2: lower leg
@@ -51,7 +55,13 @@ class HardwareInterface():
                     [0, 0, 0, 0]])
 
         self.angle_publisher = rospy.Publisher('/servo_angles', Float64MultiArray, queue_size=10)
-    
+        self.create()
+
+    def create(self):
+        for i in range(16):
+            self.kit.servo[i].actuation_range = 180
+            self.kit.servo[i].set_pulse_width_range(self.pwm_min, self.pwm_max)
+
     def set_actuator_postions(self, joint_angles):
         """Converts all angles found via inverse kinematics to the angles needed at the servo by applying multipliers
         and offsets for complimentary angles.
@@ -69,13 +79,12 @@ class HardwareInterface():
         
 
         # print('Final angles for actuation: ',self.servo_angles)    
-        """for leg_index in range(4):
+        for leg_index in range(4):
             for axis_index in range(3):
                 try:
                     self.kit.servo[self.pins[axis_index,leg_index]].angle = self.servo_angles[axis_index,leg_index]
                 except:
                     rospy.logwarn("Warning - I2C IO error")
-                    """
         # Publish the updated servo angles
         self.publish_servo_angles()
 
@@ -99,7 +108,12 @@ class HardwareInterface():
         servo_list : 3x4 numpy array of 1's and zeros. Row = Actuator; Column = leg.
                     If a Given actuator is 0 is 1 it should be deactivated, if it is 0 is should be left on. 
         """
-        servo = np.zeros((3, 4))
+        for leg_index in range(4):
+            for axis_index in range(3):
+                if servo_list[axis_index,leg_index] == 1:
+                    self.kit.servo[self.pins[axis_index,leg_index]].angle = None
+
+    """    servo = np.zeros((3, 4))
         for leg_index in range(4):
             for axis_index in range(3):
                 if servo_list[axis_index,leg_index] == 1:
@@ -107,7 +121,7 @@ class HardwareInterface():
         msg = Float64MultiArray()
         msg.data = servo.flatten().tolist()
         self.angle_publisher.publish(msg)
-
+"""
 
     def joint_angles_to_servo_angles(self,joint_angles):
         """Converts joint found via inverse kinematics to the angles needed at the servo using linkage analysis.
@@ -132,12 +146,12 @@ class HardwareInterface():
             self.servo_angles[0,leg] = m.degrees( joint_angles[0,leg] ) # servo zero is same as IK zero
             self.servo_angles[1,leg] = m.degrees( THETA2              ) # servo zero is same as IK zero
             self.servo_angles[2,leg] = m.degrees( m.pi/2 + m.pi-THETA0) # servo zero is different to IK zero
-        # print('Uncorrected servo_angles: ',self.servo_angles)
-
+        print('Uncorrected servo_angles: ',self.servo_angles)
+        p = 2 # Because I am using a very small servo range which move 0 to 90 for 1 to 180, I need to double my angles to actually translate
         # Adding final physical offset angles from servo calibration and clipping to 180 degree max
-        self.servo_angles = np.clip(self.servo_angles + self.physical_calibration_offsets,0,180)
+        self.servo_angles = np.clip(p * self.servo_angles + self.physical_calibration_offsets,0,180)
         
-        # print('Unflipped servo_angles: ',self.servo_angles)
+        print('Unflipped servo_angles: ',self.servo_angles)
 
         #Accounting for difference in configuration of servos (some are mounted backwards)
         self.servo_angles  = np.round(np.multiply(self.servo_angles,self.servo_multipliers)+ self.complementary_angle,1)
@@ -229,7 +243,7 @@ def impose_physical_limits(desired_joint_angles):
         Desired angles of all joints for all legs from inverse kinematics
 
     Returns
-    -------
+    -------:
     possble_joint_angles: numpy array 3x4 of float angles (radians)
         The angles that will be attempted to be implemeneted, limited to a possible range
     '''
@@ -238,10 +252,10 @@ def impose_physical_limits(desired_joint_angles):
     for i in range(4):
         hip,upper,lower = np.degrees(desired_joint_angles[:,i])
 
-        hip   = np.clip(hip,-20,20)
-        upper = np.clip(upper,0,120)
+        hip   = np.clip(hip,-10,10)
+        upper = np.clip(upper,0,60)
 
-        if      0    <=  upper <     10  :
+        if      0    <=  upper <     5  :
             lower = np.clip(lower, -20 , 40) 
         elif 10    <=  upper <     20  :
             lower = np.clip(lower, -40 , 40)

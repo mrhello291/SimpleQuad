@@ -64,4 +64,3 @@ while True:
     # Print results
     print(f"Yaw: {yaw:.2f}°, Pitch: {pitch:.2f}°, Roll: {roll:.2f}°")
 
-    time.sleep(0.1)

@@ -56,6 +56,18 @@ CMAKE_BINARY_DIR = /home/mrhello/SimpleQuad/quad_ws/build/quad_peripheral_interf
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
 # Special rule for the target install/strip
 install/strip: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
@@ -101,17 +113,6 @@ test/fast: test
 
 .PHONY : test/fast
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -123,17 +124,16 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
 
-# Special rule for the target install/local
-install/local/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local/fast
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -168,149 +168,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named _quad_peripheral_interfacing_generate_messages_check_deps_ElectricalMeasurements
-
-# Build rule for target.
-_quad_peripheral_interfacing_generate_messages_check_deps_ElectricalMeasurements: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _quad_peripheral_interfacing_generate_messages_check_deps_ElectricalMeasurements
-.PHONY : _quad_peripheral_interfacing_generate_messages_check_deps_ElectricalMeasurements
-
-# fast build rule for target.
-_quad_peripheral_interfacing_generate_messages_check_deps_ElectricalMeasurements/fast:
-	$(MAKE) -f CMakeFiles/_quad_peripheral_interfacing_generate_messages_check_deps_ElectricalMeasurements.dir/build.make CMakeFiles/_quad_peripheral_interfacing_generate_messages_check_deps_ElectricalMeasurements.dir/build
-.PHONY : _quad_peripheral_interfacing_generate_messages_check_deps_ElectricalMeasurements/fast
-
-#=============================================================================
-# Target rules for targets named std_msgs_generate_messages_eus
-
-# Build rule for target.
-std_msgs_generate_messages_eus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_eus
-.PHONY : std_msgs_generate_messages_eus
-
-# fast build rule for target.
-std_msgs_generate_messages_eus/fast:
-	$(MAKE) -f CMakeFiles/std_msgs_generate_messages_eus.dir/build.make CMakeFiles/std_msgs_generate_messages_eus.dir/build
-.PHONY : std_msgs_generate_messages_eus/fast
-
-#=============================================================================
-# Target rules for targets named quad_peripheral_interfacing_generate_messages
-
-# Build rule for target.
-quad_peripheral_interfacing_generate_messages: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 quad_peripheral_interfacing_generate_messages
-.PHONY : quad_peripheral_interfacing_generate_messages
-
-# fast build rule for target.
-quad_peripheral_interfacing_generate_messages/fast:
-	$(MAKE) -f CMakeFiles/quad_peripheral_interfacing_generate_messages.dir/build.make CMakeFiles/quad_peripheral_interfacing_generate_messages.dir/build
-.PHONY : quad_peripheral_interfacing_generate_messages/fast
-
-#=============================================================================
-# Target rules for targets named std_msgs_generate_messages_py
-
-# Build rule for target.
-std_msgs_generate_messages_py: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_py
-.PHONY : std_msgs_generate_messages_py
-
-# fast build rule for target.
-std_msgs_generate_messages_py/fast:
-	$(MAKE) -f CMakeFiles/std_msgs_generate_messages_py.dir/build.make CMakeFiles/std_msgs_generate_messages_py.dir/build
-.PHONY : std_msgs_generate_messages_py/fast
-
-#=============================================================================
-# Target rules for targets named std_msgs_generate_messages_nodejs
-
-# Build rule for target.
-std_msgs_generate_messages_nodejs: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_nodejs
-.PHONY : std_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-std_msgs_generate_messages_nodejs/fast:
-	$(MAKE) -f CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
-.PHONY : std_msgs_generate_messages_nodejs/fast
-
-#=============================================================================
-# Target rules for targets named run_tests
-
-# Build rule for target.
-run_tests: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 run_tests
-.PHONY : run_tests
-
-# fast build rule for target.
-run_tests/fast:
-	$(MAKE) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/build
-.PHONY : run_tests/fast
-
-#=============================================================================
-# Target rules for targets named quad_peripheral_interfacing_generate_messages_eus
-
-# Build rule for target.
-quad_peripheral_interfacing_generate_messages_eus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 quad_peripheral_interfacing_generate_messages_eus
-.PHONY : quad_peripheral_interfacing_generate_messages_eus
-
-# fast build rule for target.
-quad_peripheral_interfacing_generate_messages_eus/fast:
-	$(MAKE) -f CMakeFiles/quad_peripheral_interfacing_generate_messages_eus.dir/build.make CMakeFiles/quad_peripheral_interfacing_generate_messages_eus.dir/build
-.PHONY : quad_peripheral_interfacing_generate_messages_eus/fast
-
-#=============================================================================
-# Target rules for targets named std_msgs_generate_messages_cpp
-
-# Build rule for target.
-std_msgs_generate_messages_cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_cpp
-.PHONY : std_msgs_generate_messages_cpp
-
-# fast build rule for target.
-std_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make CMakeFiles/std_msgs_generate_messages_cpp.dir/build
-.PHONY : std_msgs_generate_messages_cpp/fast
-
-#=============================================================================
-# Target rules for targets named std_msgs_generate_messages_lisp
-
-# Build rule for target.
-std_msgs_generate_messages_lisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_lisp
-.PHONY : std_msgs_generate_messages_lisp
-
-# fast build rule for target.
-std_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make CMakeFiles/std_msgs_generate_messages_lisp.dir/build
-.PHONY : std_msgs_generate_messages_lisp/fast
-
-#=============================================================================
-# Target rules for targets named quad_peripheral_interfacing_generate_messages_nodejs
-
-# Build rule for target.
-quad_peripheral_interfacing_generate_messages_nodejs: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 quad_peripheral_interfacing_generate_messages_nodejs
-.PHONY : quad_peripheral_interfacing_generate_messages_nodejs
-
-# fast build rule for target.
-quad_peripheral_interfacing_generate_messages_nodejs/fast:
-	$(MAKE) -f CMakeFiles/quad_peripheral_interfacing_generate_messages_nodejs.dir/build.make CMakeFiles/quad_peripheral_interfacing_generate_messages_nodejs.dir/build
-.PHONY : quad_peripheral_interfacing_generate_messages_nodejs/fast
-
-#=============================================================================
-# Target rules for targets named download_extra_data
-
-# Build rule for target.
-download_extra_data: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 download_extra_data
-.PHONY : download_extra_data
-
-# fast build rule for target.
-download_extra_data/fast:
-	$(MAKE) -f CMakeFiles/download_extra_data.dir/build.make CMakeFiles/download_extra_data.dir/build
-.PHONY : download_extra_data/fast
-
-#=============================================================================
 # Target rules for targets named tests
 
 # Build rule for target.
@@ -322,71 +179,6 @@ tests: cmake_check_build_system
 tests/fast:
 	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/build
 .PHONY : tests/fast
-
-#=============================================================================
-# Target rules for targets named quad_peripheral_interfacing_generate_messages_cpp
-
-# Build rule for target.
-quad_peripheral_interfacing_generate_messages_cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 quad_peripheral_interfacing_generate_messages_cpp
-.PHONY : quad_peripheral_interfacing_generate_messages_cpp
-
-# fast build rule for target.
-quad_peripheral_interfacing_generate_messages_cpp/fast:
-	$(MAKE) -f CMakeFiles/quad_peripheral_interfacing_generate_messages_cpp.dir/build.make CMakeFiles/quad_peripheral_interfacing_generate_messages_cpp.dir/build
-.PHONY : quad_peripheral_interfacing_generate_messages_cpp/fast
-
-#=============================================================================
-# Target rules for targets named quad_peripheral_interfacing_gencpp
-
-# Build rule for target.
-quad_peripheral_interfacing_gencpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 quad_peripheral_interfacing_gencpp
-.PHONY : quad_peripheral_interfacing_gencpp
-
-# fast build rule for target.
-quad_peripheral_interfacing_gencpp/fast:
-	$(MAKE) -f CMakeFiles/quad_peripheral_interfacing_gencpp.dir/build.make CMakeFiles/quad_peripheral_interfacing_gencpp.dir/build
-.PHONY : quad_peripheral_interfacing_gencpp/fast
-
-#=============================================================================
-# Target rules for targets named doxygen
-
-# Build rule for target.
-doxygen: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 doxygen
-.PHONY : doxygen
-
-# fast build rule for target.
-doxygen/fast:
-	$(MAKE) -f CMakeFiles/doxygen.dir/build.make CMakeFiles/doxygen.dir/build
-.PHONY : doxygen/fast
-
-#=============================================================================
-# Target rules for targets named quad_peripheral_interfacing_geneus
-
-# Build rule for target.
-quad_peripheral_interfacing_geneus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 quad_peripheral_interfacing_geneus
-.PHONY : quad_peripheral_interfacing_geneus
-
-# fast build rule for target.
-quad_peripheral_interfacing_geneus/fast:
-	$(MAKE) -f CMakeFiles/quad_peripheral_interfacing_geneus.dir/build.make CMakeFiles/quad_peripheral_interfacing_geneus.dir/build
-.PHONY : quad_peripheral_interfacing_geneus/fast
-
-#=============================================================================
-# Target rules for targets named _catkin_empty_exported_target
-
-# Build rule for target.
-_catkin_empty_exported_target: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _catkin_empty_exported_target
-.PHONY : _catkin_empty_exported_target
-
-# fast build rule for target.
-_catkin_empty_exported_target/fast:
-	$(MAKE) -f CMakeFiles/_catkin_empty_exported_target.dir/build.make CMakeFiles/_catkin_empty_exported_target.dir/build
-.PHONY : _catkin_empty_exported_target/fast
 
 #=============================================================================
 # Target rules for targets named clean_test_results
@@ -402,69 +194,121 @@ clean_test_results/fast:
 .PHONY : clean_test_results/fast
 
 #=============================================================================
-# Target rules for targets named quad_peripheral_interfacing_generate_messages_lisp
+# Target rules for targets named download_extra_data
 
 # Build rule for target.
-quad_peripheral_interfacing_generate_messages_lisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 quad_peripheral_interfacing_generate_messages_lisp
-.PHONY : quad_peripheral_interfacing_generate_messages_lisp
+download_extra_data: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 download_extra_data
+.PHONY : download_extra_data
 
 # fast build rule for target.
-quad_peripheral_interfacing_generate_messages_lisp/fast:
-	$(MAKE) -f CMakeFiles/quad_peripheral_interfacing_generate_messages_lisp.dir/build.make CMakeFiles/quad_peripheral_interfacing_generate_messages_lisp.dir/build
-.PHONY : quad_peripheral_interfacing_generate_messages_lisp/fast
+download_extra_data/fast:
+	$(MAKE) -f CMakeFiles/download_extra_data.dir/build.make CMakeFiles/download_extra_data.dir/build
+.PHONY : download_extra_data/fast
 
 #=============================================================================
-# Target rules for targets named quad_peripheral_interfacing_genlisp
+# Target rules for targets named doxygen
 
 # Build rule for target.
-quad_peripheral_interfacing_genlisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 quad_peripheral_interfacing_genlisp
-.PHONY : quad_peripheral_interfacing_genlisp
+doxygen: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 doxygen
+.PHONY : doxygen
 
 # fast build rule for target.
-quad_peripheral_interfacing_genlisp/fast:
-	$(MAKE) -f CMakeFiles/quad_peripheral_interfacing_genlisp.dir/build.make CMakeFiles/quad_peripheral_interfacing_genlisp.dir/build
-.PHONY : quad_peripheral_interfacing_genlisp/fast
+doxygen/fast:
+	$(MAKE) -f CMakeFiles/doxygen.dir/build.make CMakeFiles/doxygen.dir/build
+.PHONY : doxygen/fast
 
 #=============================================================================
-# Target rules for targets named quad_peripheral_interfacing_gennodejs
+# Target rules for targets named _catkin_empty_exported_target
 
 # Build rule for target.
-quad_peripheral_interfacing_gennodejs: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 quad_peripheral_interfacing_gennodejs
-.PHONY : quad_peripheral_interfacing_gennodejs
+_catkin_empty_exported_target: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _catkin_empty_exported_target
+.PHONY : _catkin_empty_exported_target
 
 # fast build rule for target.
-quad_peripheral_interfacing_gennodejs/fast:
-	$(MAKE) -f CMakeFiles/quad_peripheral_interfacing_gennodejs.dir/build.make CMakeFiles/quad_peripheral_interfacing_gennodejs.dir/build
-.PHONY : quad_peripheral_interfacing_gennodejs/fast
+_catkin_empty_exported_target/fast:
+	$(MAKE) -f CMakeFiles/_catkin_empty_exported_target.dir/build.make CMakeFiles/_catkin_empty_exported_target.dir/build
+.PHONY : _catkin_empty_exported_target/fast
 
 #=============================================================================
-# Target rules for targets named quad_peripheral_interfacing_genpy
+# Target rules for targets named std_msgs_generate_messages_cpp
 
 # Build rule for target.
-quad_peripheral_interfacing_genpy: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 quad_peripheral_interfacing_genpy
-.PHONY : quad_peripheral_interfacing_genpy
+std_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_cpp
+.PHONY : std_msgs_generate_messages_cpp
 
 # fast build rule for target.
-quad_peripheral_interfacing_genpy/fast:
-	$(MAKE) -f CMakeFiles/quad_peripheral_interfacing_genpy.dir/build.make CMakeFiles/quad_peripheral_interfacing_genpy.dir/build
-.PHONY : quad_peripheral_interfacing_genpy/fast
+std_msgs_generate_messages_cpp/fast:
+	$(MAKE) -f CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make CMakeFiles/std_msgs_generate_messages_cpp.dir/build
+.PHONY : std_msgs_generate_messages_cpp/fast
 
 #=============================================================================
-# Target rules for targets named quad_peripheral_interfacing_generate_messages_py
+# Target rules for targets named std_msgs_generate_messages_eus
 
 # Build rule for target.
-quad_peripheral_interfacing_generate_messages_py: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 quad_peripheral_interfacing_generate_messages_py
-.PHONY : quad_peripheral_interfacing_generate_messages_py
+std_msgs_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_eus
+.PHONY : std_msgs_generate_messages_eus
 
 # fast build rule for target.
-quad_peripheral_interfacing_generate_messages_py/fast:
-	$(MAKE) -f CMakeFiles/quad_peripheral_interfacing_generate_messages_py.dir/build.make CMakeFiles/quad_peripheral_interfacing_generate_messages_py.dir/build
-.PHONY : quad_peripheral_interfacing_generate_messages_py/fast
+std_msgs_generate_messages_eus/fast:
+	$(MAKE) -f CMakeFiles/std_msgs_generate_messages_eus.dir/build.make CMakeFiles/std_msgs_generate_messages_eus.dir/build
+.PHONY : std_msgs_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named run_tests
+
+# Build rule for target.
+run_tests: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 run_tests
+.PHONY : run_tests
+
+# fast build rule for target.
+run_tests/fast:
+	$(MAKE) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/build
+.PHONY : run_tests/fast
+
+#=============================================================================
+# Target rules for targets named std_msgs_generate_messages_lisp
+
+# Build rule for target.
+std_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_lisp
+.PHONY : std_msgs_generate_messages_lisp
+
+# fast build rule for target.
+std_msgs_generate_messages_lisp/fast:
+	$(MAKE) -f CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make CMakeFiles/std_msgs_generate_messages_lisp.dir/build
+.PHONY : std_msgs_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named std_msgs_generate_messages_nodejs
+
+# Build rule for target.
+std_msgs_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_nodejs
+.PHONY : std_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+std_msgs_generate_messages_nodejs/fast:
+	$(MAKE) -f CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
+.PHONY : std_msgs_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named std_msgs_generate_messages_py
+
+# Build rule for target.
+std_msgs_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_py
+.PHONY : std_msgs_generate_messages_py
+
+# fast build rule for target.
+std_msgs_generate_messages_py/fast:
+	$(MAKE) -f CMakeFiles/std_msgs_generate_messages_py.dir/build.make CMakeFiles/std_msgs_generate_messages_py.dir/build
+.PHONY : std_msgs_generate_messages_py/fast
 
 #=============================================================================
 # Target rules for targets named gmock_main
@@ -524,36 +368,24 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... install/strip"
-	@echo "... _quad_peripheral_interfacing_generate_messages_check_deps_ElectricalMeasurements"
-	@echo "... std_msgs_generate_messages_eus"
-	@echo "... install"
-	@echo "... quad_peripheral_interfacing_generate_messages"
-	@echo "... std_msgs_generate_messages_py"
-	@echo "... std_msgs_generate_messages_nodejs"
-	@echo "... run_tests"
-	@echo "... quad_peripheral_interfacing_generate_messages_eus"
-	@echo "... list_install_components"
-	@echo "... std_msgs_generate_messages_cpp"
-	@echo "... std_msgs_generate_messages_lisp"
-	@echo "... quad_peripheral_interfacing_generate_messages_nodejs"
-	@echo "... download_extra_data"
-	@echo "... tests"
-	@echo "... quad_peripheral_interfacing_generate_messages_cpp"
-	@echo "... quad_peripheral_interfacing_gencpp"
-	@echo "... doxygen"
-	@echo "... quad_peripheral_interfacing_geneus"
-	@echo "... _catkin_empty_exported_target"
-	@echo "... clean_test_results"
-	@echo "... quad_peripheral_interfacing_generate_messages_lisp"
-	@echo "... quad_peripheral_interfacing_genlisp"
-	@echo "... quad_peripheral_interfacing_gennodejs"
-	@echo "... test"
-	@echo "... quad_peripheral_interfacing_genpy"
-	@echo "... quad_peripheral_interfacing_generate_messages_py"
-	@echo "... edit_cache"
-	@echo "... rebuild_cache"
 	@echo "... install/local"
+	@echo "... tests"
+	@echo "... clean_test_results"
+	@echo "... download_extra_data"
+	@echo "... doxygen"
+	@echo "... _catkin_empty_exported_target"
+	@echo "... install/strip"
+	@echo "... std_msgs_generate_messages_cpp"
+	@echo "... install"
+	@echo "... std_msgs_generate_messages_eus"
+	@echo "... list_install_components"
+	@echo "... run_tests"
+	@echo "... std_msgs_generate_messages_lisp"
+	@echo "... std_msgs_generate_messages_nodejs"
+	@echo "... std_msgs_generate_messages_py"
+	@echo "... test"
+	@echo "... rebuild_cache"
+	@echo "... edit_cache"
 	@echo "... gmock_main"
 	@echo "... gmock"
 	@echo "... gtest_main"

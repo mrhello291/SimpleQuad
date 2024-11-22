@@ -5,25 +5,3 @@ Symlinking /home/mrhello/SimpleQuad/quad_ws/devel/lib/quad/run_robot.py
 Symlinking /home/mrhello/SimpleQuad/quad_ws/devel/lib/python3/dist-packages/quad/__init__.py
 Symlinking /home/mrhello/SimpleQuad/quad_ws/devel/share/quad/cmake/quadConfig-version.cmake
 Symlinking /home/mrhello/SimpleQuad/quad_ws/devel/share/quad/cmake/quadConfig.cmake
-Cleaning: (/home/akash/SimpleQuad/quad_ws/devel/.private/quad/cmake.lock, /home/akash/SimpleQuad/quad_ws/devel/./cmake.lock)
-Cleaning: (/home/akash/SimpleQuad/quad_ws/devel/.private/quad/lib/quad/cmake.lock, /home/akash/SimpleQuad/quad_ws/devel/lib/quad/cmake.lock)
-Cleaning: (/home/akash/SimpleQuad/quad_ws/devel/.private/quad/lib/quad/quad_driver.py, /home/akash/SimpleQuad/quad_ws/devel/lib/quad/quad_driver.py)
-Cleaning: (/home/akash/SimpleQuad/quad_ws/devel/.private/quad/lib/quad/run_robot.py, /home/akash/SimpleQuad/quad_ws/devel/lib/quad/run_robot.py)
-Cleaning: (/home/akash/SimpleQuad/quad_ws/devel/.private/quad/lib/python3/dist-packages/quad/__init__.py, /home/akash/SimpleQuad/quad_ws/devel/lib/python3/dist-packages/quad/__init__.py)
-Cleaning: (/home/akash/SimpleQuad/quad_ws/devel/.private/quad/lib/pkgconfig/quad.pc, /home/akash/SimpleQuad/quad_ws/devel/lib/pkgconfig/quad.pc)
-Cleaning: (/home/akash/SimpleQuad/quad_ws/devel/.private/quad/share/quad/cmake/quadConfig.cmake, /home/akash/SimpleQuad/quad_ws/devel/share/quad/cmake/quadConfig.cmake)
-Cleaning: (/home/akash/SimpleQuad/quad_ws/devel/.private/quad/share/quad/cmake/quadConfig-version.cmake, /home/akash/SimpleQuad/quad_ws/devel/share/quad/cmake/quadConfig-version.cmake)
-Unlinking: /home/akash/SimpleQuad/quad_ws/devel/lib/quad/cmake.lock
-Already unlinked: {}
-Unlinking: /home/akash/SimpleQuad/quad_ws/devel/lib/quad/quad_driver.py
-Already unlinked: {}
-Unlinking: /home/akash/SimpleQuad/quad_ws/devel/lib/quad/run_robot.py
-Already unlinked: {}
-Unlinking: /home/akash/SimpleQuad/quad_ws/devel/lib/python3/dist-packages/quad/__init__.py
-Already unlinked: {}
-Unlinking: /home/akash/SimpleQuad/quad_ws/devel/lib/pkgconfig/quad.pc
-Already unlinked: {}
-Unlinking: /home/akash/SimpleQuad/quad_ws/devel/share/quad/cmake/quadConfig.cmake
-Already unlinked: {}
-Unlinking: /home/akash/SimpleQuad/quad_ws/devel/share/quad/cmake/quadConfig-version.cmake
-Already unlinked: {}

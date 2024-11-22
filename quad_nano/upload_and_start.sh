@@ -10,5 +10,5 @@ arduino-cli compile --fqbn $BOARD $SKETCH_PATH
 arduino-cli upload --fqbn $BOARD -p $PORT $SKETCH_PATH
 
 # Start the ROS serial bridge
-rosrun rosserial_python serial_node.py $PORT
+# rosrun rosserial_python serial_node.py $PORT
 
