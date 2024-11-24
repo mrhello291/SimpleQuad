@@ -30,7 +30,7 @@ class HardwareInterface():
         """ 'servo_multipliers' and 'complementary_angle' both work to flip some angles, x, to (180-x) so that movement on each leg is consistent despite
             physical motor oritentation changes. For hips I have defined + as going up for hips. """
         self.servo_multipliers = np.array(
-                            [[-1, 1, 1, -1], 
+                            [[1, -1, -1, 1], 
                             [1, -1, 1, -1], 
                             [-1, 1, -1, 1]])
         self.complementary_angle = np.array(
@@ -50,8 +50,8 @@ class HardwareInterface():
         #             [29, 13, 33, 15],
         #             [26, 12, 30, 4]])
         self.physical_calibration_offsets = np.array(
-                    [[75, 70, 100, 75],
-                    [10, 0, 5, 10],
+                    [[75, 70, 90, 90],
+                    [0, 0, 0, 0],
                     [0, 0, 0, 0]])
 
         self.angle_publisher = rospy.Publisher('/servo_angles', Float64MultiArray, queue_size=10)
@@ -147,7 +147,7 @@ class HardwareInterface():
             self.servo_angles[1,leg] = m.degrees( THETA2              ) # servo zero is same as IK zero
             self.servo_angles[2,leg] = m.degrees( m.pi/2 + m.pi-THETA0) # servo zero is different to IK zero
         print('Uncorrected servo_angles: ',self.servo_angles)
-        p = 2 # Because I am using a very small servo range which move 0 to 90 for 1 to 180, I need to double my angles to actually translate
+        p = 1.2 # Because I am using a very small servo range which move 0 to 90 for 1 to 180, I need to double my angles to actually translate
         # Adding final physical offset angles from servo calibration and clipping to 180 degree max
         self.servo_angles = np.clip(p * self.servo_angles + self.physical_calibration_offsets,0,180)
         
@@ -253,32 +253,40 @@ def impose_physical_limits(desired_joint_angles):
         hip,upper,lower = np.degrees(desired_joint_angles[:,i])
 
         hip   = np.clip(hip,-10,10)
-        upper = np.clip(upper,0,60)
+        upper = np.clip(upper,0,80)
 
         if      0    <=  upper <     5  :
-            lower = np.clip(lower, -20 , 40) 
-        elif 10    <=  upper <     20  :
-            lower = np.clip(lower, -40 , 40)
-        elif 20    <=  upper <     30  :
-            lower = np.clip(lower, -50 , 40) 
-        elif 30    <=  upper <     40  :
-            lower = np.clip(lower, -60 , 30) 
-        elif 40    <=  upper <     50  :
-            lower = np.clip(lower, -70 , 25)
-        elif 50    <=  upper <     60  :
-            lower = np.clip(lower, -70 , 20) 
-        elif 60    <=  upper <     70  :
-            lower = np.clip(lower, -70 , 0) 
-        elif 70    <=  upper <     80  :
-            lower = np.clip(lower, -70 , -10)
-        elif 80    <=  upper <     90  :
-            lower = np.clip(lower, -70 , -20) 
-        elif 90    <=  upper <     100  :
-            lower = np.clip(lower, -70 , -30) 
-        elif 100    <=  upper <     110  :
-            lower = np.clip(lower, -70 , -40)
-        elif 110    <=  upper <     120  :
-            lower = np.clip(lower, -70 , -60) 
+            lower = np.clip(lower, 40 , 50) 
+        elif 5    <=  upper <     10  :
+            lower = np.clip(lower, 35 , 50)
+        elif 10    <=  upper <     15  :
+            lower = np.clip(lower, 30 , 55) 
+        elif 15    <=  upper <     20  :
+            lower = np.clip(lower, 25 , 55) 
+        elif 20    <=  upper <     25  :
+            lower = np.clip(lower, 30 , 60)
+        elif 25    <=  upper <     30  :
+            lower = np.clip(lower, 30 , 60) 
+        elif 30    <=  upper <     35  :
+            lower = np.clip(lower, 35 , 55) 
+        elif 35    <=  upper <     40  :
+            lower = np.clip(lower, 30 , 55)
+        elif 40    <=  upper <     45  :
+            lower = np.clip(lower, 25 , 55) 
+        elif 45    <=  upper <     50  :
+            lower = np.clip(lower, 20 , 55) 
+        elif 50    <=  upper <     55  :
+            lower = np.clip(lower, 20 , 50)
+        elif 55    <=  upper <     60  :
+            lower = np.clip(lower, 15 , 50) 
+        elif 60    <=  upper <     65  :
+            lower = np.clip(lower, 10 , 50) 
+        elif 65    <=  upper <     70  :
+            lower = np.clip(lower, 10 , 50) 
+        elif 70    <=  upper <     75  :
+            lower = np.clip(lower, 10 , 40) 
+        elif 75    <=  upper <=     80  :
+            lower = np.clip(lower, 15 , 35) 
 
         possible_joint_angles[:,i] =  hip,upper,lower
 

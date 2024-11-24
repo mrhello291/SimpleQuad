@@ -14,8 +14,8 @@ class Configuration:
 
         #################### COMMANDS ####################
         self.max_x_velocity = 1.2
-        self.max_y_velocity = 0.5
-        self.max_yaw_rate = 2.0
+        self.max_y_velocity = 0.7
+        self.max_yaw_rate = 3.0
         self.max_pitch = 30.0 * np.pi / 180.0
         
         #################### MOVEMENT PARAMS ####################
@@ -34,33 +34,33 @@ class Configuration:
 
         #These x_shift variables will move the default foot positions of the robot 
         #Handy if the centre of mass shifts as can move the feet to compensate
-        self.rear_leg_x_shift = -0.04 #In default config, the robots mass is slightly biased to the back feet, so the back feet are shifted back slightly
+        self.rear_leg_x_shift = 0.00 #In default config, the robots mass is slightly biased to the back feet, so the back feet are shifted back slightly
         self.front_leg_x_shift = 0.00
 
-        self.delta_y = 0.1106 #0.1083
-        self.default_z_ref = -0.25 #-0.16
+        self.delta_y = 0.1550 #0.1083
+        self.default_z_ref = -0.26 #-0.16
 
         #################### SWING ######################
         self.z_coeffs = None
         self.z_clearance = 0.07
         self.alpha = (
-            0.5  # Ratio between touchdown distance and total horizontal stance movement
+            1.0  # Ratio between touchdown distance and total horizontal stance movement
         )
         self.beta = (
-            0.5  # Ratio between touchdown distance and total horizontal stance movement
+            1.0  # Ratio between touchdown distance and total horizontal stance movement
         )
 
         #################### GAIT #######################
-        self.dt = 0.01
+        self.dt = 0.02
         self.num_phases = 4
         self.contact_phases = np.array(
             [[1, 1, 1, 0], [1, 0, 1, 1], [1, 0, 1, 1], [1, 1, 1, 0]]
         )
         self.overlap_time = (
-            0.04  # duration of the phase where all four feet are on the ground
+            0.1  # duration of the phase where all four feet are on the ground
         )
         self.swing_time = (
-            0.07  # duration of the phase when only two feet are on the ground
+            0.4  # duration of the phase when only two feet are on the ground
         )
 
         ######################## GEOMETRY ######################
@@ -211,6 +211,6 @@ class Leg_linkage:
         self.lower_leg_bend_angle = m.radians(0) # degrees found on CAD
         self.i = self.upper_leg_length
         self.hip_width = configuration.L1 * 1000
-        self.gamma = m.atan(0)
+        self.gamma = m.radians(m.pi / 2)
         self.EDC = m.acos((self.c**2+self.h**2-self.e**2)/(2*self.c*self.h))
 
