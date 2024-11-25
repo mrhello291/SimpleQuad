@@ -35,14 +35,14 @@ class IMU:
         try:
             acc = np.array(self.sensor.acceleration) - self.accelOffs  # [Ax, Ay, Az]
             gyro = np.radians(np.array(self.sensor.gyro))  # [Gx, Gy, Gz] in rad/s
-            mag_data = np.array(self.mag.magnetic18b_Gauss)  # [Mx, My, Mz]
-            self.quaternion = self.madgwick.updateMARG(quaternion, gyr=gyro, acc=acc, mag=mag_data)
+            mag_data = np.array(self.magSensor.magnetic18b_Gauss)  # [Mx, My, Mz]
+            self.quaternion = self.madgwick.updateMARG(self.quaternion, gyr=gyro, acc=acc, mag=mag_data)
             # Convert quaternion to Euler angles (yaw, pitch, roll)
             r = R.from_quat(self.quaternion)  # Convert to Scipy rotation object
             yaw, pitch, roll = r.as_euler('zyx', degrees=True)  # Extract in degrees
-            yaw = m.radians(360-yaw) 
-            pitch = m.radians(-pitch)
-            roll = m.radians(roll - 60) # fixed offset to account for the IMU being off by 60 degrees
+            yaw = m.radians(yaw) - 0.01 
+            pitch = m.radians(-pitch) + 0.09
+            roll = m.radians(roll - 60) - 1.77 # fixed offset to account for the IMU being off by 60 degrees
             self.last_euler = [yaw,pitch,roll]
         except:
             self.last_euler = np.array([ 0, 0, 0])

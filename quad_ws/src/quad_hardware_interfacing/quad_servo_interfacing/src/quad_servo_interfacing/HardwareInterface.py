@@ -30,7 +30,7 @@ class HardwareInterface():
         """ 'servo_multipliers' and 'complementary_angle' both work to flip some angles, x, to (180-x) so that movement on each leg is consistent despite
             physical motor oritentation changes. For hips I have defined + as going up for hips. """
         self.servo_multipliers = np.array(
-                            [[1, -1, -1, 1], 
+                            [[-1, 1, 1, -1], 
                             [1, -1, 1, -1], 
                             [-1, 1, -1, 1]])
         self.complementary_angle = np.array(
@@ -49,8 +49,9 @@ class HardwareInterface():
         #             [[75, 130, 113, 73],
         #             [29, 13, 33, 15],
         #             [26, 12, 30, 4]])
+        # 75, 70, 90, 90
         self.physical_calibration_offsets = np.array(
-                    [[75, 70, 90, 90],
+                    [[120, 115, 85, 105],
                     [0, 0, 0, 0],
                     [0, 0, 0, 0]])
 
@@ -82,6 +83,7 @@ class HardwareInterface():
         for leg_index in range(4):
             for axis_index in range(3):
                 try:
+                    print(f'{self.pins[axis_index,leg_index]} : {self.servo_angles[axis_index,leg_index]}')
                     self.kit.servo[self.pins[axis_index,leg_index]].angle = self.servo_angles[axis_index,leg_index]
                 except:
                     rospy.logwarn("Warning - I2C IO error")
@@ -155,6 +157,9 @@ class HardwareInterface():
 
         #Accounting for difference in configuration of servos (some are mounted backwards)
         self.servo_angles  = np.round(np.multiply(self.servo_angles,self.servo_multipliers)+ self.complementary_angle,1)
+        #for leg in range(4):
+        #    self.servo_angles[1, leg] = np.clip(self.servo_angles[1, leg] - 60, 30, 180)
+        print('Servo_angles: ',self.servo_angles)
 
 
 

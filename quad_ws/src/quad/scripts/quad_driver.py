@@ -128,12 +128,12 @@ class DingoDriver:
                         rospy.logerr("Received Request to enable external control, but e-stop is pressed so the request has been ignored. Please release e-stop and try again")
                 
                 # Read imu data. Orientation will be None if no data was available
-                # rospy.loginfo(imu.read_orientation())
                 self.state.euler_orientation = (
                     self.imu.read_orientation() if self.use_imu else np.array([0, 0, 0])
                 )
                 [yaw,pitch,roll] = self.state.euler_orientation
-                # print('Yaw: ',np.round(yaw,2),'Pitch: ',np.round(pitch,2),'Roll: ',np.round(roll,2))
+                print('Yaw: ',np.round(yaw,2),'Pitch: ',np.round(pitch,2),'Roll: ',np.round(roll,2))
+                print(self.use_imu)
                 # Step the controller forward by dt
                 self.controller.run(self.state, command)
 

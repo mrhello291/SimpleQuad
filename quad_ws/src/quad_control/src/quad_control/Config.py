@@ -30,15 +30,15 @@ class Configuration:
         self.max_stance_yaw_rate = 1
 
         #################### STANCE ####################
-        self.delta_x = 0.117 #- 0.00535 #115650.00535
+        self.delta_x = 0.21 #- 0.00535 #115650.00535
 
         #These x_shift variables will move the default foot positions of the robot 
         #Handy if the centre of mass shifts as can move the feet to compensate
-        self.rear_leg_x_shift = 0.00 #In default config, the robots mass is slightly biased to the back feet, so the back feet are shifted back slightly
-        self.front_leg_x_shift = 0.00
+        self.rear_leg_x_shift = -0.10 #In default config, the robots mass is slightly biased to the back feet, so the back feet are shifted back slightly
+        self.front_leg_x_shift = -0.05
 
-        self.delta_y = 0.1550 #0.1083
-        self.default_z_ref = -0.26 #-0.16
+        self.delta_y = 0.1560 #0.1083
+        self.default_z_ref = -0.28 #-0.16
 
         #################### SWING ######################
         self.z_coeffs = None
@@ -51,16 +51,16 @@ class Configuration:
         )
 
         #################### GAIT #######################
-        self.dt = 0.02
+        self.dt = 0.01
         self.num_phases = 4
         self.contact_phases = np.array(
             [[1, 1, 1, 0], [1, 0, 1, 1], [1, 0, 1, 1], [1, 1, 1, 0]]
         )
         self.overlap_time = (
-            0.1  # duration of the phase where all four feet are on the ground
+            0.01  # duration of the phase where all four feet are on the ground
         )
         self.swing_time = (
-            0.4  # duration of the phase when only two feet are on the ground
+            0.07  # duration of the phase when only two feet are on the ground
         )
 
         ######################## GEOMETRY ######################
@@ -75,10 +75,10 @@ class Configuration:
         )
 
         #Leg lengths
-        self.L1 = 0.0347
-        self.L2 = 0.1475
-        self.L3 = 0.1726
-        self.phi = m.radians(72.122)
+        self.L1 = 0.03808
+        self.L2 = 0.1450
+        self.L3 = 0.1535
+        self.phi = m.radians(93.303) # 72.24
         
         ################### INERTIAL ####################
         #Upper leg -> 35gm, Lower Leg -> 82gm(42gm without ankle), first link = 1.8gm, nextlink = 3gm, plate link = 28gm, finallink=7.7gm (So net extras=40gm added to the 250gm module makes 290gm)
@@ -200,12 +200,12 @@ class Leg_linkage:
     def __init__(self,configuration):
         self.a = 60 #mm
         self.b = 60 #mm
-        self.c = 44 #mm
+        self.c = 46 #mm
         self.d = 30  #mm
-        self.e = 56 #mm
+        self.e = 54.5 #mm
         self.f = 160 #mm  #new will be 130.0 -> Long bar
-        self.g = 50 #mm -> Long bar lower joint and upper leg lower joint distance
-        self.h = 47 #mm -> Distance between top of upper leg and joint of long bar with plate
+        self.g = 49 #mm -> Long bar lower joint and upper leg lower joint distance
+        self.h = 48 #mm -> Distance between top of upper leg and joint of long bar with plate
         self.upper_leg_length = configuration.L2*1000
         self.lower_leg_length = configuration.L3*1000
         self.lower_leg_bend_angle = m.radians(0) # degrees found on CAD
