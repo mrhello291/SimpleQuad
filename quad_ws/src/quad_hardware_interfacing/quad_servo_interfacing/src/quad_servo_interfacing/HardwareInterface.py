@@ -32,11 +32,11 @@ class HardwareInterface():
         self.servo_multipliers = np.array(
                             [[-1, 1, 1, -1], 
                             [1, -1, 1, -1], 
-                            [-1, 1, -1, 1]])
+                            [1, -1, 1, -1]])
         self.complementary_angle = np.array(
                             [[180, 0, 0, 180], 
                             [0, 180, 0, 180], 
-                            [180, 0, 180, 0]])
+                            [0, 180, 0, 180]])
 
         """ 'physical_calibration_offsets' are the angle required for the servo to be at their 'zero'locations. These zero locations
             are NOT the angles deifned in the IK, but rather locations that allow practical usage of the servo's 180 degree range of motion. 
@@ -53,7 +53,7 @@ class HardwareInterface():
         self.physical_calibration_offsets = np.array(
                     [[100, 105, 85, 100],
                     [10, 0, 5, 10],
-                    [40, 0, 0, 0]])
+                    [0, 0, 0, 0]])
 
         self.angle_publisher = rospy.Publisher('/servo_angles', Float64MultiArray, queue_size=10)
         self.create()
