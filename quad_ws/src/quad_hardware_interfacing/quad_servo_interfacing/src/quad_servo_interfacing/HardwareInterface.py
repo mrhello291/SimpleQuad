@@ -51,9 +51,9 @@ class HardwareInterface():
         #             [26, 12, 30, 4]])
         # 75, 70, 90, 90
         self.physical_calibration_offsets = np.array(
-                    [[120, 115, 85, 105],
-                    [0, 0, 0, 0],
-                    [0, 0, 0, 0]])
+                    [[100, 105, 85, 100],
+                    [10, 0, 5, 10],
+                    [40, 0, 0, 0]])
 
         self.angle_publisher = rospy.Publisher('/servo_angles', Float64MultiArray, queue_size=10)
         self.create()
@@ -258,7 +258,7 @@ def impose_physical_limits(desired_joint_angles):
         hip,upper,lower = np.degrees(desired_joint_angles[:,i])
 
         hip   = np.clip(hip,-10,10)
-        upper = np.clip(upper,0,80)
+        upper = np.clip(upper,0,70)
 
         if      0    <=  upper <     5  :
             lower = np.clip(lower, 40 , 50) 

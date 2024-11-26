@@ -35,10 +35,10 @@ class Configuration:
         #These x_shift variables will move the default foot positions of the robot 
         #Handy if the centre of mass shifts as can move the feet to compensate
         self.rear_leg_x_shift = -0.10 #In default config, the robots mass is slightly biased to the back feet, so the back feet are shifted back slightly
-        self.front_leg_x_shift = -0.05
+        self.front_leg_x_shift = -0.10
 
         self.delta_y = 0.1560 #0.1083
-        self.default_z_ref = -0.28 #-0.16
+        self.default_z_ref = -0.24 #-0.16
 
         #################### SWING ######################
         self.z_coeffs = None
