@@ -41,8 +41,8 @@ class IMU:
             r = R.from_quat(self.quaternion)  # Convert to Scipy rotation object
             yaw, pitch, roll = r.as_euler('zyx', degrees=True)  # Extract in degrees
             yaw = m.radians(yaw) 
-            pitch = m.radians(-pitch) + 0.02
-            roll = m.radians(roll - 60) + 2.77 # fixed offset to account for the IMU being off by 60 degrees
+            pitch = m.radians(-pitch) + 0.01
+            roll = m.radians(roll - 60) -0.18 # fixed offset to account for the IMU being off by 60 degrees
             self.last_euler = [yaw,pitch,roll]
         except:
             self.last_euler = np.array([ 0, 0, 0])

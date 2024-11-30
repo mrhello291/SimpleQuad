@@ -43,7 +43,7 @@ class HardwareInterface():
 
             - Offsets for HIP servos allign the hip so that the leg is perfectly vertical at an input of zero degrees, direct from the IK.
             - Offsets for UPPER leg servos map allign the servo so that it is horizontal toward the back of the robot at an input of zero degrees, direct from the IK. 
-            - Offsets for LOWER leg servos map allign the servo so that it is vertically down at zero degrees. Note that IK requires a transformation of
+            - Offsets for LOWER leg servos map allign the servo so that it is vertically down at zero degrees. Note that IK requires a transformatiiion of
                 angle_sent_to_servo = (180-angle_from_IK) + 90 degrees to map to this physcial servo location.  """
         # self.physical_calibration_offsets = np.array(
         #             [[75, 130, 113, 73],
@@ -52,7 +52,7 @@ class HardwareInterface():
         # 75, 70, 90, 90
         self.physical_calibration_offsets = np.array(
                     [[100, 105, 85, 100],
-                    [10, 0, 5, 10],
+                    [10, 0, 20, 10],
                     [0, 0, 0, 0]])
 
         self.angle_publisher = rospy.Publisher('/servo_angles', Float64MultiArray, queue_size=10)
@@ -74,7 +74,6 @@ class HardwareInterface():
         """
         # Limit angles ot physical possiblity
         possible_joint_angles = impose_physical_limits(joint_angles)
-        
         #Convert to servo angles
         self.joint_angles_to_servo_angles(possible_joint_angles)
         
@@ -141,7 +140,6 @@ class HardwareInterface():
 
         for leg in range(4):
             THETA2, THETA3 = joint_angles[1:,leg]
-
             THETA0 = lower_leg_angle_to_servo_angle(self.link, m.pi/2-THETA2, THETA3 + np.pi/2) # TODO draw a diagram to describe this transformatin from IK frame to LINK analysis frame
 
             #Adding offset from IK angle definition to servo angle definition, and conversion to degrees
@@ -149,7 +147,7 @@ class HardwareInterface():
             self.servo_angles[1,leg] = m.degrees( THETA2              ) # servo zero is same as IK zero
             self.servo_angles[2,leg] = m.degrees( m.pi/2 + m.pi-THETA0) # servo zero is different to IK zero
         print('Uncorrected servo_angles: ',self.servo_angles)
-        p = 1.2 # Because I am using a very small servo range which move 0 to 90 for 1 to 180, I need to double my angles to actually translate
+        p = 1 # Because I am using a very small servo range which move 0 to 90 for 1 to 180, I need to double my angles to actually translate
         # Adding final physical offset angles from servo calibration and clipping to 180 degree max
         self.servo_angles = np.clip(p * self.servo_angles + self.physical_calibration_offsets,0,180)
         
@@ -256,43 +254,72 @@ def impose_physical_limits(desired_joint_angles):
 
     for i in range(4):
         hip,upper,lower = np.degrees(desired_joint_angles[:,i])
+        hip   = np.clip(hip,-20,20)
+        upper = np.clip(upper,10,130)
 
-        hip   = np.clip(hip,-10,10)
-        upper = np.clip(upper,0,70)
+        if      0    <=  upper <     10  :
+            lower = np.clip(lower, 8 , 40) 
+        elif 10    <=  upper <     20  :
+            lower = np.clip(lower, -1 , 30)
+        elif 20    <=  upper <     30  :
+            lower = np.clip(lower, -7 , 7) 
+        elif 30    <=  upper <     40  :
+            lower = np.clip(lower, -15 , 0) 
+        elif 40    <=  upper <     50  :
+            lower = np.clip(lower, -23 , -7)
+        elif 50    <=  upper <     60  :
+            lower = np.clip(lower, -30 , -15) 
+        elif 60    <=  upper <     70  :
+            lower = np.clip(lower, -37 , -25) 
+        elif 70    <=  upper <     80  :
+            lower = np.clip(lower, -43 , -32)
+        elif 80    <=  upper <     90  :
+            lower = np.clip(lower, -47 , -40) 
+        elif 90    <=  upper <     100 :
+            lower = np.clip(lower, -49.89 , -45.5) 
+        elif 100    <=  upper <    110 :
+            lower = np.clip(lower, -49.97 , -46)
+        elif 110    <=  upper <    120 :
+            lower = np.clip(lower, -49.978 , -48)
+        elif 120    <= upper  <    130 :
+            lower = np.clip(lower, -49.9779, -48.5)
 
-        if      0    <=  upper <     5  :
-            lower = np.clip(lower, 40 , 50) 
-        elif 5    <=  upper <     10  :
-            lower = np.clip(lower, 35 , 50)
-        elif 10    <=  upper <     15  :
-            lower = np.clip(lower, 30 , 55) 
-        elif 15    <=  upper <     20  :
-            lower = np.clip(lower, 25 , 55) 
-        elif 20    <=  upper <     25  :
-            lower = np.clip(lower, 30 , 60)
-        elif 25    <=  upper <     30  :
-            lower = np.clip(lower, 30 , 60) 
-        elif 30    <=  upper <     35  :
-            lower = np.clip(lower, 35 , 55) 
-        elif 35    <=  upper <     40  :
-            lower = np.clip(lower, 30 , 55)
-        elif 40    <=  upper <     45  :
-            lower = np.clip(lower, 25 , 55) 
-        elif 45    <=  upper <     50  :
-            lower = np.clip(lower, 20 , 55) 
-        elif 50    <=  upper <     55  :
-            lower = np.clip(lower, 20 , 50)
-        elif 55    <=  upper <     60  :
-            lower = np.clip(lower, 15 , 50) 
-        elif 60    <=  upper <     65  :
-            lower = np.clip(lower, 10 , 50) 
-        elif 65    <=  upper <     70  :
-            lower = np.clip(lower, 10 , 50) 
-        elif 70    <=  upper <     75  :
-            lower = np.clip(lower, 10 , 40) 
-        elif 75    <=  upper <=     80  :
-            lower = np.clip(lower, 15 , 35) 
-
+#        hip   = np.clip(hip,-10,10)
+#        upper = np.clip(upper,0,70)
+#
+#        if      0    <=  upper <     5  :
+#            lower = np.clip(lower, -180 , 180) 
+#        elif 5    <=  upper <     10  :
+#            lower = np.clip(lower, 35 , 50)
+#        elif 10    <=  upper <     15  :
+#            lower = np.clip(lower, -10 , 90) 
+#        elif 15    <=  upper <     20  :
+#            lower = np.clip(lower, 25 , 55) 
+#        elif 20    <=  upper <     25  :
+#            lower = np.clip(lower, 30 , 60)
+#        elif 25    <=  upper <     30  :
+#            lower = np.clip(lower, 30 , 60) 
+#        elif 30    <=  upper <     35  :
+#            lower = np.clip(lower, 35 , 55) 
+#        elif 35    <=  upper <     40  :
+#            lower = np.clip(lower, 30 , 55)
+#        elif 40    <=  upper <     45  :
+#            lower = np.clip(lower, 25 , 55) 
+#        elif 45    <=  upper <     50  :
+#            lower = np.clip(lower, 20 , 55) 
+#        elif 50    <=  upper <     55  :
+#            lower = np.clip(lower, -40 , 80)
+#        elif 55    <=  upper <     60  :
+#            lower = np.clip(lower, 15 , 50) 
+#        elif 60    <=  upper <     65  :
+#            lower = np.clip(lower, 10 , 50) 
+#        elif 65    <=  upper <     70  :
+#            lower = np.clip(lower, 10 , 50) 
+#        elif 70    <=  upper <     75  :
+#            lower = np.clip(lower, 10 , 40) 
+#        elif 75    <=  upper <=     80  :
+#            lower = np.clip(lower, 15 , 35) 
+#
         possible_joint_angles[:,i] =  hip,upper,lower
 
     return np.radians(possible_joint_angles)

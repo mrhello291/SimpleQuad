@@ -16,6 +16,9 @@ class State:
         self.foot_locations = np.zeros((3, 4))
         self.rotated_foot_locations = np.zeros((3, 4))
         self.joint_angles = np.zeros((3, 4))
+        # self.joint_angles = np.array([[0, 0, 0, 0],
+        #                               [80, 89.9, 80, 89.9],
+        #                               [-60, -60, 60, 60]])
         self.speed_factor = 1
 
         self.currently_estopped = 0

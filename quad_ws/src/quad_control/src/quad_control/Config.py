@@ -13,9 +13,9 @@ class Configuration:
         self.ps4_deactivated_color = PS4_DEACTIVATED_COLOR    
 
         #################### COMMANDS ####################
-        self.max_x_velocity = 1.2
-        self.max_y_velocity = 0.7
-        self.max_yaw_rate = 3.0
+        self.max_x_velocity = 1
+        self.max_y_velocity = 0.5
+        self.max_yaw_rate = 3
         self.max_pitch = 30.0 * np.pi / 180.0
         
         #################### MOVEMENT PARAMS ####################
@@ -34,20 +34,20 @@ class Configuration:
 
         #These x_shift variables will move the default foot positions of the robot 
         #Handy if the centre of mass shifts as can move the feet to compensate
-        self.rear_leg_x_shift = -0.10 #In default config, the robots mass is slightly biased to the back feet, so the back feet are shifted back slightly
-        self.front_leg_x_shift = -0.10
+        self.rear_leg_x_shift = -0.00 #In default config, the robots mass is slightly biased to the back feet, so the back feet are shifted back slightly
+        self.front_leg_x_shift = 0.00
 
         self.delta_y = 0.1560 #0.1083
-        self.default_z_ref = -0.24 #-0.16
+        self.default_z_ref = -0.27 #-0.16
 
         #################### SWING ######################
         self.z_coeffs = None
-        self.z_clearance = 0.07
+        self.z_clearance = 0.15
         self.alpha = (
-            1.0  # Ratio between touchdown distance and total horizontal stance movement
+            0.5  # Ratio between touchdown distance and total horizontal stance movement
         )
         self.beta = (
-            1.0  # Ratio between touchdown distance and total horizontal stance movement
+            0.5  # Ratio between touchdown distance and total horizontal stance movement
         )
 
         #################### GAIT #######################
