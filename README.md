@@ -1,6 +1,7 @@
 # 🤖 Simple Quad — Budget-Friendly Quadruped Robot for Hilly Terrain
 
 **Simple Quad** is a significantly simplified and cost-effective version of the Dingo Quadruped, designed and developed by a team of second-year undergraduates. Our goal was to prove that quadruped robotics is achievable at a student level with constrained resources — without compromising on core functionality or real-world applicability.
+
 ![Simple Quad in action](https://github.com/user-attachments/assets/2f257c5f-0329-46a6-ab44-8f4bbac6c672)
 
 ---
@@ -66,16 +67,16 @@ Click the thumbnails below to watch Simple Quad in action:
 
 <div align="center">
 
-<a href="https://www.youtube.com/watch?v=VIDEO_ID_1">
-  <img src="https://img.youtube.com/vi/VIDEO_ID_1/0.jpg" width="480" alt="Video 1 Thumbnail"/>
+<a href="https://www.youtube.com/watch?v=v2JReG7R9UY">
+  <img src="https://img.youtube.com/vi/v2JReG7R9UY/0.jpg" width="480" alt="Video 1 Thumbnail"/>
 </a>
 <br>
 <em>▶️ Click the image above to watch Video 1 on YouTube</em>
 
 <br><br>
 
-<a href="https://www.youtube.com/watch?v=VIDEO_ID_2">
-  <img src="https://img.youtube.com/vi/VIDEO_ID_2/0.jpg" width="480" alt="Video 2 Thumbnail"/>
+<a href="https://www.youtube.com/shorts/QS4pmNzX9w0">
+  <img src="https://img.youtube.com/vi/QS4pmNzX9w0/0.jpg" width="480" alt="Video 2 Thumbnail"/>
 </a>
 <br>
 <em>▶️ Click the image above to watch Video 2 on YouTube</em>
@@ -106,6 +107,12 @@ Click the thumbnails below to watch Simple Quad in action:
 
 - ✅ **Mechanical Design Overhaul**  
   Improve joint articulation, reinforce weak links, and fix center-of-gravity issues to improve gait smoothness.
+
+- 🦿 **Trot Gait Optimization**  
+  Fine-tune servo timings and phase offsets to produce a stable, energy-efficient trot gait for uneven terrain.
+
+- 🧠 **New Gait Implementations**  
+  Integrate additional gait patterns (crawl, pace, bound) to adapt dynamically to different terrain conditions.
 
 - 🤖 **RL-based Control Algorithms**  
   Replace manual gaits with Reinforcement Learning models for adaptive and terrain-aware walking for a seperate autonomous mode and refined leg movement.
