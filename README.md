@@ -131,5 +131,6 @@ Developed by second-year B.Tech CSE students as a demonstration that advanced ro
 
 Inspired by [Dingo Quadruped](https://github.com/robomechatrons/dingo-robot) and adapted to suit tighter constraints and rougher terrain.
 
+@mrhello291 @PreetamKB1
 ---
 
