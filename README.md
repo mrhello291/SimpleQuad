@@ -62,7 +62,8 @@ Everything is grounded and powered from the RPi to simplify the wiring — the A
 ---
 
 ## 📹 Demo Videos
->All videos [here](https://drive.google.com/drive/folders/1dnnFLZWygSIIR1WF50Ek8o8b16W5Pwsc?usp=sharing) 
+_**>All videos [here](https://drive.google.com/drive/folders/1dnnFLZWygSIIR1WF50Ek8o8b16W5Pwsc?usp=sharing)**_
+
 Click the thumbnails below to watch Simple Quad in action:
 
 <div align="center">
